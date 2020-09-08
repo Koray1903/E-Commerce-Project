@@ -1,0 +1,84 @@
+@media only screen and (min-width: 320px) {
+  .Footer {
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    font-family: "Lato", sans-serif !important;
+    justify-content: center;
+    padding: 10% 5%;
+    width: 100%;
+  }
+
+  .Footer__Option {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .Footer__Option__Text {
+    color: #333333;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  .Footer__Option__Up {
+    height: 6px;
+    opacity: 0.7;
+    width: 8px;
+  }
+
+  .Footer__Option__Down {
+    height: 7px;
+    opacity: 0.7;
+    width: 8px;
+  }
+
+  .Footer__Text {
+    align-self: start;
+    color: #45413e;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+  }
+
+  .Footer__Logos {
+    align-items: center;
+    display: flex;
+    height: 18px;
+    justify-content: space-between;
+    width: 120px;
+  }
+
+  .Footer__Logos__Facebook {
+    height: 18px;
+    width: 9px;
+  }
+
+  .Footer__Logos__Google {
+    height: 17px;
+    width: 19px;
+  }
+
+  .Footer__Logos__Twitter {
+    height: 14px;
+    width: 17px;
+  }
+
+  .Footer__Logos__Pinterest {
+    height: 17px;
+    width: 14px;
+  }
+
+  .Element__Hide {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=Footer.css.map */

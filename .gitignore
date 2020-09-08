@@ -21,3 +21,15 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+!/src/PopularProducts.json
+!/src/images/PRODUCT_IMAGES/
+!/src/images/RESIMLER/
+!/src/images/111.png
+!/src/images/popular_item_1.png
+!/src/images/popular_item_2.png
+!/src/images/popular_item_3.png
+!/src/images/popular_item_4.png
+!/src/images/popular_item_8.png
+!/src/images/popular_item_6.png
+!/src/images/popular_item_7.png
+!/src/images/popular_item_5.png
