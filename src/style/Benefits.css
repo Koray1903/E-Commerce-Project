@@ -11,7 +11,7 @@
   }
 
   .Benefits__Delivery {
-    align-items: start;
+    align-items: flex-start;
     align-self: end;
     display: flex;
     justify-content: space-between;
@@ -20,8 +20,8 @@
   }
 
   .Benefits__Recycle {
-    align-items: start;
-    align-self: start;
+    align-items: flex-start;
+    align-self: flex-start;
     display: flex;
     justify-content: space-between;
     margin: 1rem 0;
@@ -29,8 +29,8 @@
   }
 
   .Benefits__Clipboard {
-    align-items: start;
-    align-self: end;
+    align-items: flex-start;
+    align-self: flex-end;
     display: flex;
     justify-content: space-between;
     margin: 1rem 0;

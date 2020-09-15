@@ -1,0 +1,58 @@
+@media only screen and (min-width: 320px) {
+
+  .Slider {
+    align-items: center;
+    background: gray;
+    border: 1px red solid;
+    display: flex;
+    flex-direction: column;
+    font-family: "Lato", sans-serif !important;
+    justify-content: center;
+  }
+
+  .Slider__Carousel {
+    width: 80%;
+  }
+
+  .SliderItems__SingleItem {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .SliderItems__Image {
+    border-radius: 16px;
+    height: 472px;
+    object-fit: cover;
+    opacity: 0.71;
+    width: 290px;
+  }
+
+  .SliderItems__Info__Title {
+    font-size: 28px;
+    font-weight: 700;
+    //color: #ffffff;
+    height: 88px;
+    width: 260px;
+  }
+
+  .SliderItems__Info__Text {
+    font-size: 14px;
+    font-weight: 400;
+    //color: #ffffff;
+    height: 132px;
+    width: 258px;
+  }
+
+
+  .SliderItems__Info__Button {
+    background: transparent;
+    border: 2px solid #ffffff;
+    height: 37px;
+    opacity: 0.5;
+    text-transform: uppercase;
+    width: 147px;
+  }
+
+}
