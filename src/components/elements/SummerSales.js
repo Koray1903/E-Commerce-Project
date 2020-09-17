@@ -1,9 +1,7 @@
 import React from 'react';
-import "../style/SummerSales.scss"
+import "../../style/SummerSales.scss"
 
 const SummerSales = () => {
-
-
 
     return (
         <div>

@@ -1,3 +1,38 @@
+@media only screen and (min-width: 320px) {
+  .Header {
+    align-items: center;
+    border-bottom: 2px solid #e8e2d6;
+    display: flex;
+    justify-content: flex-start;
+    padding: 16px;
+  }
 
+  .Header__Hamburger__Open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-self: flex-start;
+    padding: 14px 0;
+    cursor: pointer;
+  }
+
+  .Header__Hamburger__Open__Line {
+    background-color: #262a32;
+    height: 2px;
+    margin: 2px;
+    width: 18px;
+  }
+
+  .Header__Hamburger__Close {
+    margin: 2px;
+    width: 18px;
+    cursor: pointer;
+  }
+
+  .Header__Logo {
+    justify-self: center;
+    margin: 0 auto;
+  }
+}
 
 /*# sourceMappingURL=Header.css.map */

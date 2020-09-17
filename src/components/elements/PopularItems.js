@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Carousel from "react-bootstrap/Carousel"
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../style/PopularItems.scss"
+import "../../style/PopularItems.scss"
 
 const PopularItems = () => {
 

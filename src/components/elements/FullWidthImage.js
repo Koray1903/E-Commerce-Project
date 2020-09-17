@@ -1,5 +1,5 @@
 import React from 'react';
-import "../style/FullWidthImage.scss"
+import "../../style/FullWidthImage.scss"
 
 const FullWidthImage = () => {
 

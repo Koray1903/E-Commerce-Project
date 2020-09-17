@@ -1,5 +1,5 @@
 import React from 'react';
-import "../style/Benefits.scss"
+import "../../style/Benefits.scss"
 
 const Benefits = () => {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import "../style/Fixed.scss"
+import "../../style/Fixed.scss"
 
 const Fixed = () => {
     return (

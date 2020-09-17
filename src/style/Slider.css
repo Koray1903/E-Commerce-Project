@@ -1,52 +1,46 @@
 @media only screen and (min-width: 320px) {
   .Slider {
     align-items: center;
-    background: gray;
-    border: 1px red solid;
     display: flex;
     flex-direction: column;
-    font-family: "Lato", sans-serif !important;
-    justify-content: center;
-  }
-
-  .Slider__Carousel {
-    width: 80%;
+    padding: 18px;
   }
 
   .SliderItems__SingleItem {
+    height: 600px;
+  }
+
+  .SliderItems__Info {
+    font-family: "Lato", sans-serif !important;
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-  }
-
-  .SliderItems__Image {
-    border-radius: 16px;
-    height: 472px;
-    object-fit: cover;
-    opacity: 0.71;
-    width: 290px;
+    padding: 24px;
+    height: 550px;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
   }
 
   .SliderItems__Info__Title {
+    color: white;
     font-size: 28px;
-    font-weight: 700;
-    height: 88px;
-    width: 260px;
+    font-weight: 800;
   }
 
   .SliderItems__Info__Text {
-    font-size: 14px;
+    color: white;
+    font-size: 15px;
     font-weight: 400;
-    height: 132px;
-    width: 258px;
   }
 
   .SliderItems__Info__Button {
     background: transparent;
-    border: 2px solid #ffffff;
+    border: 2px solid white;
+    border-radius: 24px;
+    color: white;
+    font-size: 14px;
     height: 37px;
-    opacity: 0.5;
     text-transform: uppercase;
     width: 147px;
   }

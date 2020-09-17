@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Carousel from "react-bootstrap/Carousel"
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../style/Slider.scss"
+import "../../style/Slider.scss"
 
 const Slider = () => {
 
@@ -19,10 +19,13 @@ const Slider = () => {
             <Carousel activeIndex={index} onSelect={handleSelect} className="Slider__Carousel">
 
                 {/* SLIDE ONE */}
-                <Carousel.Item className="SliderItems__SingleItem">
-                    <img className="SliderItems__Image"
-                         src="./slider/home-slider-1.png"
-                         alt="First slide"/>
+                <Carousel.Item className="SliderItems__SingleItem"
+                               style={{
+                                   backgroundImage: "url(./slider/home-slider-1.png)",
+                                   backgroundSize: "cover",
+                                   borderRadius: "16px",
+                                   backgroundPosition: "right center"
+                               }}>
 
                     <div className="SliderItems__Info">
                         <p className="SliderItems__Info__Title">Control and manage any device with cloud solutions</p>
@@ -38,10 +41,13 @@ const Slider = () => {
                 {/* SLIDE ONE */}
 
                 {/* SLIDE TWO */}
-                <Carousel.Item>
-                    <img className="SliderItems__Image"
-                         src="./slider/home-slider-2.png"
-                         alt="Second slide"/>
+                <Carousel.Item className="SliderItems__SingleItem"
+                               style={{
+                                   backgroundImage: "url(./slider/home-slider-2.png)",
+                                   backgroundSize: "cover",
+                                   borderRadius: "16px",
+                                   backgroundPosition: "right center"
+                               }}>
 
                     <div className="SliderItems__Info">
                         <p className="SliderItems__Info__Title">Control and manage any device with cloud solutions</p>
@@ -57,10 +63,13 @@ const Slider = () => {
                 {/* SLIDE TWO */}
 
                 {/* SLIDE THREE */}
-                <Carousel.Item>
-                    <img className="SliderItems__Image"
-                         src="./slider/home-slider-3.png"
-                         alt="Third slide"/>
+                <Carousel.Item className="SliderItems__SingleItem"
+                               style={{
+                                   backgroundImage: "url(./slider/home-slider-3.png)",
+                                   backgroundSize: "cover",
+                                   borderRadius: "16px",
+                                   backgroundPosition: "right center"
+                               }}>
 
                     <div className="SliderItems__Info">
                         <p className="SliderItems__Info__Title">Control and manage any device with cloud solutions</p>
