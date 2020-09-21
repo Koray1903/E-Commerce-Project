@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import "../../style/SummerSales.scss"
 
 const SummerSales = () => {
 
     return (
-        <div>
-
-        </div>
+        <>
+        {/* TO BE IMPLEMENTED ON TABLET AND DESKTOP VERSIONS */}
+        </>
     );
 };
 

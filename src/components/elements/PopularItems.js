@@ -1,26 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import Carousel from "react-bootstrap/Carousel"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../style/PopularItems.scss"
 
-const PopularItems = () => {
-
-    // GET SCREEN DIMENSIONS
-    const [width, setWidth] = useState(window.innerWidth);
-    const [height, setHeight] = useState(window.innerHeight);
-
-    const updateWidthAndHeight = () => {
-        setWidth(window.innerWidth);
-        setHeight(window.innerHeight);
-    }
-
-    useEffect(() => {
-        window.addEventListener("resize", updateWidthAndHeight);
-        // console.log(width)
-        return () => window.removeEventListener("resize", updateWidthAndHeight);
-    }, [width, height]);
-    // GET SCREEN DIMENSIONS
-
+const PopularItems = ({screenWidth}) => {
 
     // CAROUSEL
     const [index, setIndex] = useState(0);
@@ -30,16 +13,17 @@ const PopularItems = () => {
     };
     // CAROUSEL
 
-
     return (
         <section className="PopularItems">
 
-            {/* ADD HORIZONTAL LINE LATER ! */}
-            <p className="PopularItems__Title">Popular Items</p>
-            {/* ADD HORIZONTAL LINE LATER ! */}
+            <div className="PopularItems__Title">
+                <div className="PopularItems__Title__HorizontalLine"/>
+                <p className="PopularItems__Title__Text">Popular Items</p>
+                <div className="PopularItems__Title__HorizontalLine"/>
+            </div>
 
             {/* MOBILE */}
-            {width <= 767 ?
+            {screenWidth <= 767 ?
                 <section>
                     <Carousel activeIndex={index} onSelect={handleSelect} className="PopularItems__Carousel">
                         {/* PRODUCT ONE */}
@@ -49,14 +33,15 @@ const PopularItems = () => {
                                  alt="First slide"/>
 
                             <div className="PopularItems__Info">
-                                <p className="PopularItems__Info__Name">Kristina Dam Oak Table With White<br/> Marble Top</p>
+                                <p className="PopularItems__Info__Name">Kristina Dam Oak Table With White<br/> Marble
+                                    Top</p>
                                 <p className="PopularItems__Info__Price">$ 799.55</p>
                             </div>
 
                         </Carousel.Item>
                         {/* PRODUCT ONE */}
 
-                        {/* PRODUCT TWO */}
+                        {/* PRODUCT TWO - EDIT LATER */}
                         <Carousel.Item>
                             <img className="PopularItems__Image"
                                  src="./popular_items/popular-item-2.png"
@@ -82,7 +67,7 @@ const PopularItems = () => {
                             </div>
 
                         </Carousel.Item>
-                        {/* PRODUCT THREE */}
+                        {/* PRODUCT THREE  - EDIT LATER */}
 
                         {/* PRODUCT FOUR */}
                         <Carousel.Item>
@@ -162,7 +147,7 @@ const PopularItems = () => {
 
 
             {/* TABLET & DESKTOP - EDIT LATER */}
-            {width > 767 ? <div>example</div> : null}
+            {screenWidth > 767 ? <div>example</div> : null}
             {/* TABLET & DESKTOP - EDIT LATER */}
 
         </section>

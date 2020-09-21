@@ -13,76 +13,39 @@ const Slider = () => {
     };
     // CAROUSEL
 
+    const backgroundImageLinks = ["./slider/home-slider-1.png", "./slider/home-slider-2.png", "./slider/home-slider-3.png"]
+
     return (
         <section className="Slider">
 
             <Carousel activeIndex={index} onSelect={handleSelect} className="Slider__Carousel">
 
-                {/* SLIDE ONE */}
-                <Carousel.Item className="SliderItems__SingleItem"
-                               style={{
-                                   backgroundImage: "url(./slider/home-slider-1.png)",
-                                   backgroundSize: "cover",
-                                   borderRadius: "16px",
-                                   backgroundPosition: "right center"
-                               }}>
+                {backgroundImageLinks.map(imageLink => (
 
-                    <div className="SliderItems__Info">
-                        <p className="SliderItems__Info__Title">Control and manage any device with cloud solutions</p>
-                        <p className="SliderItems__Info__Text">Improve business performance and the user experience
-                            with the right mix of IoT technology and processes
-                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-                            quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-                            sit aspernatur aut odit aut fugit, sed</p>
-                        <button className="SliderItems__Info__Button">view more</button>
-                    </div>
+                    <Carousel.Item className="SliderItems__SingleItem"
+                                   style={{
+                                       backgroundImage: `url(${imageLink})`,
+                                       backgroundSize: "cover",
+                                       borderRadius: "16px",
+                                       backgroundPosition: "right center"
+                                   }}>
 
-                </Carousel.Item>
-                {/* SLIDE ONE */}
+                        <div className="SliderItems__Info">
+                            <p className="SliderItems__Info__Title">Control and manage any device with cloud
+                                solutions</p>
+                            <p className="SliderItems__Info__Text">Improve business performance and the user experience
+                                with the right mix of IoT technology and processes
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                voluptas
+                                sit aspernatur aut odit aut fugit, sed</p>
 
-                {/* SLIDE TWO */}
-                <Carousel.Item className="SliderItems__SingleItem"
-                               style={{
-                                   backgroundImage: "url(./slider/home-slider-2.png)",
-                                   backgroundSize: "cover",
-                                   borderRadius: "16px",
-                                   backgroundPosition: "right center"
-                               }}>
+                            {/* REDIRECT TO ANOTHER PAGE */}
+                            <button className="SliderItems__Info__Button">view more</button>
+                            {/* REDIRECT TO ANOTHER PAGE */}
+                        </div>
 
-                    <div className="SliderItems__Info">
-                        <p className="SliderItems__Info__Title">Control and manage any device with cloud solutions</p>
-                        <p className="SliderItems__Info__Text">Improve business performance and the user experience
-                            with the right mix of IoT technology and processes
-                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-                            quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-                            sit aspernatur aut odit aut fugit, sed</p>
-                        <button className="SliderItems__Info__Button">view more</button>
-                    </div>
-
-                </Carousel.Item>
-                {/* SLIDE TWO */}
-
-                {/* SLIDE THREE */}
-                <Carousel.Item className="SliderItems__SingleItem"
-                               style={{
-                                   backgroundImage: "url(./slider/home-slider-3.png)",
-                                   backgroundSize: "cover",
-                                   borderRadius: "16px",
-                                   backgroundPosition: "right center"
-                               }}>
-
-                    <div className="SliderItems__Info">
-                        <p className="SliderItems__Info__Title">Control and manage any device with cloud solutions</p>
-                        <p className="SliderItems__Info__Text">Improve business performance and the user experience
-                            with the right mix of IoT technology and processes
-                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-                            quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-                            sit aspernatur aut odit aut fugit, sed</p>
-                        <button className="SliderItems__Info__Button">view more</button>
-                    </div>
-
-                </Carousel.Item>
-                {/* SLIDE THREE */}
+                    </Carousel.Item>))}
 
             </Carousel>
 

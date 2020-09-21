@@ -7,26 +7,35 @@ import FullWidthImage from "./elements/FullWidthImage";
 import Benefits from "./elements/Benefits";
 import Footer from "./elements/Footer";
 import Fixed from "./elements/Fixed";
+import CookieModal from "./elements/CookieModal";
 
-const HomePage = () => {
+const HomePage = ({screenWidth}) => {
 
     return (
         <>
             <Header/>
+
             <Slider/>
 
-            {/* NOT IN MOBILE VERSION */}
-            <SummerSales/>
-            {/* NOT IN MOBILE VERSION */}
+            {/* COOKIE MODAL - APPEARS AFTER 10 SECONDS */}
+            <CookieModal/>
+            {/* COOKIE MODAL - APPEARS AFTER 10 SECONDS */}
 
-            <PopularItems/>
+            {/* NOT AVAILABLE IN MOBILE VERSION */}
+            <SummerSales/>
+            {/* NOT AVAILABLE IN MOBILE VERSION */}
+
+            <PopularItems screenWidth={screenWidth}/>
+
             <FullWidthImage/>
+
             <Benefits/>
+
             <Footer/>
 
-            {/* LATER */}
+            {/* AT BOTTOM ONLY IN MOBILE VERSION */}
             <Fixed/>
-            {/* LATER */}
+            {/* AT BOTTOM ONLY IN MOBILE VERSION */}
         </>
     );
 };

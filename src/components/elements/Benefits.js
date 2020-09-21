@@ -1,8 +1,7 @@
-import React from 'react';
+import React from "react";
 import "../../style/Benefits.scss"
 
 const Benefits = () => {
-
 
     return (
         <section className="Benefits">

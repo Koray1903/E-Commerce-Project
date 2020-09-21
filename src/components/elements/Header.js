@@ -17,9 +17,9 @@ const Header = () => {
 
                 {!showNavigation ?
                     <div onClick={handleShowNavigation} className="Header__Hamburger__Open">
-                        <div className="Header__Hamburger__Open__Line"> </div>
-                        <div className="Header__Hamburger__Open__Line"> </div>
-                        <div className="Header__Hamburger__Open__Line"> </div>
+                        <div className="Header__Hamburger__Open__Line"></div>
+                        <div className="Header__Hamburger__Open__Line"></div>
+                        <div className="Header__Hamburger__Open__Line"></div>
                     </div>
                     :
                     <img
@@ -35,6 +35,7 @@ const Header = () => {
             {showNavigation ? <Navigation/> : null}
             {/* NAVIGATION MENU */}
 
+            {/* FIXED COMPONENT WILL BE HERE IN DESKTOP VERSION */}
         </>
     );
 };

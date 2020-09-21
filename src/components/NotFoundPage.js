@@ -10,15 +10,11 @@ const NotFoundPage = () => {
         <>
             <Header/>
 
-            {/* IN PROGRESS */}
             <NotFoundBody/>
-            {/* IN PROGRESS */}
 
             <Footer/>
 
-            {/* LATER */}
             <Fixed/>
-            {/* LATER */}
         </>
     );
 };

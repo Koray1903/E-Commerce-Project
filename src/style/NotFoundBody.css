@@ -9,8 +9,47 @@
     padding-bottom: 50px;
   }
 
+  .NotFoundPageBody {
+    align-items: center;
+    background: #f2edea;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-around;
+  }
+
+  .breadcrumb {
+    background: #f2edea;
+    margin: 0;
+    padding: 16px;
+  }
+
   .breadcrumb__home {
     color: #84bc22;
+  }
+
+  .NotFoundPage__Services {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 90vw;
+  }
+
+  .NotFoundPage__Services__HorizontalLine {
+    background: #ffffff;
+    height: 3px;
+    margin: 0;
+    opacity: 0.5;
+    width: 100px;
+  }
+
+  .NotFoundPage__Services__Text {
+    color: #45413e;
+    font-family: "Lato", sans-serif !important;
+    font-size: 31px;
+    font-weight: 700;
+    margin: 0;
   }
 
   .NotFoundPage__Message {
@@ -43,8 +82,8 @@
     color: #84bc22;
     font-size: 16px;
     font-weight: 600;
-    margin-top: 36px;
     margin-bottom: 48px;
+    margin-top: 36px;
   }
 
   .NotFoundPage__Message__SearchTitle {

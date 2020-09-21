@@ -7,7 +7,7 @@ const NotFoundBody = () => {
     return (
         <section className="NotFoundPage">
 
-            <div>
+            <div className="NotFoundPageBody">
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
                         <li className="breadcrumb-item"><a href="/" className="breadcrumb__home">Home</a></li>
@@ -15,9 +15,11 @@ const NotFoundBody = () => {
                     </ol>
                 </nav>
 
-                {/* LATER */}
-                <h1>404</h1>
-                {/* LATER */}
+                <div className="NotFoundPage__Services">
+                    <div className="NotFoundPage__Services__HorizontalLine"/>
+                    <p className="NotFoundPage__Services__Text">404</p>
+                    <div className="NotFoundPage__Services__HorizontalLine"/>
+                </div>
             </div>
 
             <div className="NotFoundPage__Message">
@@ -25,6 +27,7 @@ const NotFoundBody = () => {
 
                 <p className="NotFoundPage__Message__Two">Sorry, this page could not be found!</p>
 
+                {/* SHORTEN - LATER */}
                 <p className="NotFoundPage__Message__Three">Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
                     natoque penatibus et magnis dis parturient
                     montes, nascetur ridiculus mus.<br/>
@@ -48,6 +51,7 @@ const NotFoundBody = () => {
                     tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed
                     consequat,
                     leo eget bibendum sodales, augue velit cursus nunc,</p>
+                {/* SHORTEN - LATER */}
 
                 <p className="NotFoundPage__Message__Four">Go back to Homepage</p>
 

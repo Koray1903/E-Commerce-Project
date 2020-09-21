@@ -10,9 +10,26 @@
   }
 
   .PopularItems__Title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    padding-bottom: 16px;
+  }
+
+  .PopularItems__Title__HorizontalLine {
+    background: #6894a8;
+    height: 3px;
+    margin: 0;
+    opacity: 0.5;
+    width: 60px;
+  }
+
+  .PopularItems__Title__Text {
     color: #ffffff;
     font-size: 24px;
     font-weight: 700;
+    margin: 0;
   }
 
   .PopularItems__Carousel {

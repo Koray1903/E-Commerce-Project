@@ -1,15 +1,58 @@
 @media only screen and (min-width: 320px) {
+  .DropdownFilters__Background {
+    background: #f2edea;
+    padding: 5%;
+  }
+
   .DropdownFilters {
-    align-items: center;
     background: white; // To be changed on each click
     display: flex;
     flex-direction: column;
     font-family: 'Lato', sans-serif !important;
+    height: 500px;
     justify-content: space-between;
-    width: 90%;
+    //margin: 0 5% 0 5%;
+    padding: 16px;
+    text-align: center;
   }
 
+  .DropdownFilters__Row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
 
+  label {
+  }
+
+  .DropdownFilters__Filter {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("../images/caret-down-solid.svg"); // DOWN ICON
+    background-position: right 24px top 50%, 0 0;
+    background-repeat: no-repeat, repeat;
+    background-size: 10px auto, 100%;
+    border: 2px solid hsla(26, 5%, 26%, 0.5);
+    border-radius: 24px;
+    color: #45413e;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    padding: 8px 16px;
+    width: 200px;
+  }
+  .DropdownFilters__Filter::-ms-expand {
+    display: none;
+  }
+
+  .DropdownFilters__Filter:focus {
+    //box-shadow: 0 0 0 3px -moz-mac-focusring;
+    outline: none;
+  }
+  option {
+    width: 64px;
+  }
 }
 
 
