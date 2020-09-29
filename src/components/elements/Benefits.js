@@ -1,5 +1,5 @@
 import React from "react";
-import "../../style/Benefits.scss"
+import "../../style/Benefits.scss";
 
 const Benefits = () => {
 
@@ -17,13 +17,13 @@ const Benefits = () => {
             </div>
 
             <div className="Benefits__Recycle">
+                <img className="Benefits__Logos__Recycle"
+                     src="./Recycle.svg" alt="recycle"/>
                 <div>
                     <p className="Benefits__Title">Method</p>
                     <p className="Benefits__Text">A standardized methodology designed to deliver measurable business
                         results and predictable costs</p>
                 </div>
-                <img className="Benefits__Logos__Recycle"
-                     src="./Recycle.svg" alt="recycle"/>
             </div>
 
             <div className="Benefits__Clipboard">

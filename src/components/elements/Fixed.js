@@ -1,36 +1,30 @@
-import React, {useState, useCallback} from 'react';
-import "../../style/Fixed.scss"
+import React, {useState, useCallback} from "react";
+import "../../style/Fixed.scss";
 import LoginModal from "./LoginModal";
+import {Link} from "react-router-dom";
 
 const Fixed = () => {
 
     // LOGIN MODAL
     const [show, setShow] = useState(false);
 
-    const handleClose = useCallback(() => setShow(false),[show]);
-    const handleShow = useCallback(() => setShow(true),[show]);
+    const handleClose = useCallback(() => setShow(false), [show]);
+    const handleShow = useCallback(() => setShow(true), [show]);
     // LOGIN MODAL
 
     return (
         <section className="Fixed">
 
-            <img className="Fixed__Icon"
-                 src="../fixed/search_icon.svg"
-                 alt="search_icon"/>
+            <i className="fas fa-search Fixed__Icon"/>
 
-            <img className="Fixed__Icon"
-                 src="../fixed/user_icon.svg"
-                 alt="user_icon"
-                 onClick={handleShow}/>
+            <i className="far fa-user Fixed__Icon"/>
 
-            <img className="Fixed__Icon"
-                 src="../fixed/favorite_icon.svg"
-                 alt="favorite_icon"/>
+            <i className="far fa-heart Fixed__Icon"/>
+
             {/* AMOUNT TO BE IMPLEMENTED */}
-
-            <img className="Fixed__Icon"
-                 src="../fixed/user_icon.svg"
-                 alt="user_icon"/>
+            <Link to="/cart">
+                <i className="fas fa-shopping-bag Fixed__Icon"/>
+            </Link>
             {/* AMOUNT TO BE IMPLEMENTED */}
 
             {/* LOGIN MODAL */}

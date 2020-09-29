@@ -1,26 +1,31 @@
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .Footer {
     align-items: center;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    font-family: "Lato", sans-serif !important;
-    justify-content: center;
-    padding: 10% 5%;
-    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    min-height: 250px;
+    padding: 24px;
   }
 
-  .Footer__Option {
+  .Footer__Option__Outer {
     align-items: center;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    margin: 1rem 0;
+    margin: 12px 0;
+    width: 100%;
+  }
+
+  .Footer__Option__Inner {
     width: 100%;
   }
 
   .Footer__Option__Text {
     color: #333333;
+    font-family: "Lato", sans-serif;
     font-size: 13px;
     font-weight: 700;
     margin: 0;
@@ -43,41 +48,81 @@
   .Footer__Text {
     align-self: flex-start;
     color: #45413e;
+    display: block;
+    font-family: "Lato", sans-serif;
     font-weight: 400;
-    line-height: 18px;
+    margin: 12px 0;
     text-align: left;
-  }
-
-  .Footer__Logos {
-    align-items: center;
-    display: flex;
-    height: 18px;
-    justify-content: space-between;
-    width: 120px;
-  }
-
-  .Footer__Logos__Facebook {
-    height: 18px;
-    width: 9px;
-  }
-
-  .Footer__Logos__Google {
-    height: 17px;
-    width: 19px;
-  }
-
-  .Footer__Logos__Twitter {
-    height: 14px;
-    width: 17px;
-  }
-
-  .Footer__Logos__Pinterest {
-    height: 17px;
-    width: 14px;
   }
 
   .Element__Hide {
     display: none;
+  }
+
+  a {
+    margin: 6px 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .Footer {
+    align-items: flex-start;
+    background-color: #ffffff;
+    display: flex;
+    flex-basis: min-content;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 340px;
+    padding: 24px;
+  }
+
+  .Footer__Option__Outer {
+    margin: 12px 0;
+  }
+
+  .Footer__Option__Inner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-height: 240px;
+  }
+
+  .Footer__Option__Inner__Contacts__Desktop {
+    justify-content: space-between;
+    width: 230px;
+  }
+
+  .Footer__Option__Inner__Categories__Desktop {
+    width: 700px;
+  }
+
+  .Footer__Option__Inner__About__Desktop {
+    height: 300px;
+    width: 80px;
+  }
+
+  .Footer__Option__Text {
+    color: #333333;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  .Footer__Text {
+    align-self: flex-start;
+    color: #45413e;
+    display: block;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  a {
+    margin: 6px 0;
   }
 }
 

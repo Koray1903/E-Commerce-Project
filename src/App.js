@@ -4,6 +4,8 @@ import HomePage from "./components/HomePage";
 import NotFoundPage from "./components/NotFoundPage";
 import CategoryLandingPage from "./components/CategoryLandingPage";
 import ProductDetailPage from "./components/ProductDetailPage";
+import CartPage from "./components/CartPage";
+import "./style/App.scss";
 
 function App() {
 
@@ -14,11 +16,10 @@ function App() {
     const updateWidthAndHeight = () => {
         setScreenWidth(window.innerWidth);
         setScreenHeight(window.innerHeight);
-    }
+    };
 
     useEffect(() => {
         window.addEventListener("resize", updateWidthAndHeight);
-        console.log(screenWidth)
         return () => window.removeEventListener("resize", updateWidthAndHeight);
     }, [screenWidth, screenHeight]);
     // GET SCREEN DIMENSIONS
@@ -29,11 +30,13 @@ function App() {
 
                 <Route exact path="/" component={() => <HomePage screenWidth={screenWidth}/>}/>
 
-                <Route exact path="/clp" component={CategoryLandingPage}/>
+                <Route exact path="/clp" component={() => <CategoryLandingPage screenWidth={screenWidth}/>}/>
 
-                <Route exact path="/pdp" component={ProductDetailPage}/>
+                <Route exact path="/pdp" component={() => <ProductDetailPage screenWidth={screenWidth}/>}/>
 
-                <Route exact path="/404" component={NotFoundPage}/>
+                <Route exact path="/cart" component={() => <CartPage screenWidth={screenWidth}/>}/>
+
+                <Route exact path="/404" component={() => <NotFoundPage screenWidth={screenWidth}/>}/>
 
             </Switch>
         </Router>

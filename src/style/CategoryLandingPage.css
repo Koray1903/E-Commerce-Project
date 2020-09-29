@@ -1,0 +1,132 @@
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .CategoryLandingPageBody {
+    align-items: center;
+    background: #f2edea;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 100px;
+  }
+
+  .breadcrumb {
+    align-items: center;
+    background: #f2edea;
+    display: flex;
+    height: min-content;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .breadcrumb-item a, .breadcrumb-item a:link, .breadcrumb-item a:visited, .breadcrumb-item a:hover, .breadcrumb-item a:active {
+    color: #84bc22;
+    text-decoration: none;
+  }
+
+  .CategoryLandingPage__Services {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 90vw;
+  }
+
+  .CategoryLandingPage__Services__HorizontalLine {
+    background: #ffffff;
+    height: 3px;
+    margin: 0;
+    opacity: 0.5;
+    width: 75px;
+  }
+
+  .CategoryLandingPage__Services__Text {
+    color: #45413e;
+    font-family: "Lato", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .HideFilter__Text {
+    color: #8dc73e;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .CategoryLandingPage__ResultsText {
+    font-family: "Lato", sans-serif;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .CategoryLandingPageBody {
+    align-items: center;
+    background: #f2edea;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .breadcrumb {
+    align-items: center;
+    background: #f2edea;
+    display: flex;
+    height: min-content;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .breadcrumb-item {
+    color: #8dc73e;
+    display: inline;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .breadcrumb-item a, .breadcrumb-item a:link, .breadcrumb-item a:visited, .breadcrumb-item a:hover, .breadcrumb-item a:active {
+    color: #84bc22;
+    text-decoration: none;
+    display: inline;
+  }
+
+  .CategoryLandingPage__Services {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .CategoryLandingPage__Services__HorizontalLine {
+    background: #ffffff;
+    height: 3px;
+    margin: 0;
+    opacity: 0.5;
+    width: 30%;
+  }
+
+  .CategoryLandingPage__Services__Text {
+    color: #45413e;
+    font-family: "Lato", sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0;
+  }
+
+  .HideFilter__Text {
+    display: none;
+  }
+
+  .CategoryLandingPage__ResultsText {
+    font-family: "Lato", sans-serif;
+  }
+}
+
+/*# sourceMappingURL=CategoryLandingPage.css.map */

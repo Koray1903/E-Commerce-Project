@@ -1,105 +1,124 @@
 import React, {useState, useCallback} from 'react';
-import "../../style/Footer.scss"
+import "../../style/Footer.scss";
+import SocialNetworkLogos from "./SocialNetworkLogos";
 
-const Footer = () => {
+const Footer = ({screenWidth}) => {
 
-    const [showContacts, setShowContacts] = useState(false);
-    const [showCategories, setShowCategories] = useState(false);
-    const [showAbout, setShowAbout] = useState(false);
+    let mobileBoolean;
+    mobileBoolean = screenWidth >= 768;
+
+    const [showContacts, setShowContacts] = useState(mobileBoolean);
+    const [showCategories, setShowCategories] = useState(mobileBoolean);
+    const [showAbout, setShowAbout] = useState(mobileBoolean);
+
 
     const categories = ["Alcohol", "Art", "Books", "Drink", "Electronics", "Home", "Jewelry", "Kids & Baby", "Men's Fashion",
-        "Mobile", "Motorcycles", "Movies", "Music", "Sport", "Toys", "Travel", "Women's Fashion"]
+        "Mobile", "Motorcycles", "Movies", "Music", "Sport", "Toys", "Travel", "Women's Fashion"];
 
-    const about = ["About us", "Delivery", "Testimonials", "Contact"]
+    const about = ["About us", "Delivery", "Testimonials", "Contact"];
 
     const handleContactsClick = useCallback(() => {
-        setShowContacts(!showContacts);
-        setShowCategories(false);
-        setShowAbout(false)
-    }, [showContacts])
+        if (screenWidth < 768) {
+            setShowContacts(!showContacts);
+            setShowCategories(false);
+            setShowAbout(false);
+        }
+    }, [showContacts]);
 
     const handleCategoriesClick = useCallback(() => {
-        setShowCategories(!showCategories);
-        setShowContacts(false);
-        setShowAbout(false)
-    }, [showCategories])
+        if (screenWidth < 768) {
+            setShowCategories(!showCategories);
+            setShowContacts(false);
+            setShowAbout(false);
+        }
+    }, [showCategories]);
 
     const handleAboutClick = useCallback(() => {
-        setShowAbout(!showAbout);
-        setShowCategories(false);
-        setShowContacts(false);
-    }, [showAbout])
+        if (screenWidth < 768) {
+            setShowAbout(!showAbout);
+            setShowCategories(false);
+            setShowContacts(false);
+        }
+    }, [showAbout]);
 
 
     return (
         <section className="Footer">
+            <>
+                <p className="Footer__Text">© Copyright {(new Date()).getFullYear()}.<br/>All Rights Reserved.</p>
 
-            <p className="Footer__Text">© Copyright {(new Date()).getFullYear()}.<br/>All Rights Reserved.</p>
+                {/* CONTACTS  */}
+                <div className="Footer__Option__Outer" onClick={handleContactsClick}>
+                    <p className="Footer__Option__Text">contact</p>
 
-            {/* CONTACTS */}
-            <div className="Footer__Option" onClick={handleContactsClick}>
-                <p className="Footer__Option__Text">contact</p>
-                <img className={`Footer__Option__Down ${!showContacts ? "Element__Display" : "Element__Hide"}`}
-                     src="../footer_collapse_down.svg" alt="down"/>
-                <img className={`Footer__Option__Up ${showContacts ? "Element__Display" : "Element__Hide"}`}
-                     src="../footer_collapse_up.svg" alt="up"/>
-            </div>
+                    {screenWidth < 768 ? // ONLY IN MOBILE VERSION
+                        <>
+                            <i className={`fas fa-caret-down Footer__Option__Down ${!showContacts ? "Element__Display" : "Element__Hide"}`}/>
+                            <i className={`fas fa-caret-up Footer__Option__Up ${showContacts ? "Element__Display" : "Element__Hide"}`}/>
+                        </>
+                        : null}
+                </div>
 
-            <p className={`Footer__Text ${showContacts ? "Element__Display" : "Element__Hide"}`}>
-                Headquarters:<br/>
-                5600, Blvd. des Galeries, Bur 530<br/>
-                Québec, Québec G2K 2H6</p>
+                <div className="Footer__Option__Inner Footer__Option__Inner__Contacts__Desktop">
+                    <p className={`Footer__Text ${showContacts ? "Element__Display" : "Element__Hide"}`}>
+                        Headquarters:<br/>
+                        5600, Blvd. des Galeries, Bur 530<br/>
+                        Québec, Québec G2K 2H6</p>
 
-            <a className={`Footer__Text ${showContacts ? "Element__Display" : "Element__Hide"}`}
-               href="mailto:contact@osf-global.com">contact@osf-global.com</a>
+                    <a className={`Footer__Text ${showContacts ? "Element__Display" : "Element__Hide"}`}
+                       href="mailto:contact@osf-global.com">contact@osf-global.com</a>
 
-            <a className={`Footer__Text ${showContacts ? "Element__Display" : "Element__Hide"}`}
-               href="tel:+1-888-548-4344">+1 (888) 548-4344</a>
-            {/* CONTACTS */}
+                    <a className={`Footer__Text ${showContacts ? "Element__Display" : "Element__Hide"}`}
+                       href="tel:+1-888-548-4344">+1 (888) 548-4344</a>
+                </div>
+                {/* CONTACTS  */}
+            </>
 
-            {/* CATEGORIES */}
-            <div className="Footer__Option" onClick={handleCategoriesClick}>
-                <p className="Footer__Option__Text">categories</p>
-                <img className={`Footer__Option__Down ${!showCategories ? "Element__Display" : "Element__Hide"}`}
-                     src="../footer_collapse_down.svg" alt="down"/>
-                <img className={`Footer__Option__Up ${showCategories ? "Element__Display" : "Element__Hide"}`}
-                     src="../footer_collapse_up.svg" alt="up"/>
-            </div>
 
-            {categories.map((element, index) => (
-                <p key={index}
-                   className={`Footer__Text ${showCategories ? "Element__Display" : "Element__Hide"}`}>{element}</p>))}
-            {/* CATEGORIES */}
+            {/* CATEGORIES  */}
+            <>
+                <div className="Footer__Option__Outer" onClick={handleCategoriesClick}>
+                    <p className="Footer__Option__Text">categories</p>
+
+                    {screenWidth < 768 ? // ONLY IN MOBILE VERSION
+                        <>
+                            <i className={`fas fa-caret-down Footer__Option__Down ${!showCategories ? "Element__Display" : "Element__Hide"}`}/>
+                            <i className={`fas fa-caret-up Footer__Option__Up ${showCategories ? "Element__Display" : "Element__Hide"}`}/>
+                        </>
+                        : null}
+                </div>
+
+                <div className="Footer__Option__Inner Footer__Option__Inner__Categories__Desktop">
+                    {categories.map((element, index) => (
+                        <p key={index}
+                           className={`Footer__Text ${showCategories ? "Element__Display" : "Element__Hide"}`}>{element}</p>))}
+                </div>
+            </>
+            {/* CATEGORIES  */}
+
 
             {/* ABOUT */}
-            <div className="Footer__Option" onClick={handleAboutClick}>
-                <p className="Footer__Option__Text">about</p>
-                <img className={`Footer__Option__Down ${!showAbout ? "Element__Display" : "Element__Hide"}`}
-                     src="../footer_collapse_down.svg" alt="down"/>
-                <img className={`Footer__Option__Up ${showAbout ? "Element__Display" : "Element__Hide"}`}
-                     src="../footer_collapse_up.svg" alt="up"/>
-            </div>
+            <>
+                <div className="Footer__Option__Outer" onClick={handleAboutClick}>
+                    <p className="Footer__Option__Text">about</p>
 
-            {about.map((element, index) => (
-                <p key={index}
-                   className={`Footer__Text ${showAbout ? "Element__Display" : "Element__Hide"}`}>{element}</p>))}
+                    {screenWidth < 768 ? // ONLY IN MOBILE VERSION
+                        <>
+                            <i className={`fas fa-caret-down Footer__Option__Down ${!showAbout ? "Element__Display" : "Element__Hide"}`}/>
+                            <i className={`fas fa-caret-up Footer__Option__Up ${showAbout ? "Element__Display" : "Element__Hide"}`}/>
+                        </>
+                        : null}
+                </div>
+
+                <div className="Footer__Option__Inner Footer__Option__Inner__About__Desktop">
+                    {about.map((element, index) => (
+                        <p key={index}
+                           className={`Footer__Text ${showAbout ? "Element__Display" : "Element__Hide"}`}>{element}</p>))}
+                </div>
+            </>
             {/* ABOUT */}
 
-            {/* LOGOS */}
-            <div className="Footer__Logos">
-                <a target="_blank" href="https://www.facebook.com">
-                    <img className="Footer__Logos__Facebook" src="../facebook.svg" alt="Facebook"/></a>
-
-                <a target="_blank" href="https://www.google.com">
-                    <img className="Footer__Logos__Google" src="../google.svg" alt="Google"/></a>
-
-                <a target="_blank" href="https://www.twitter.com">
-                    <img className="Footer__Logos__Twitter" src="../twitter.svg" alt="Twitter"/></a>
-
-                <a target="_blank" href="https://www.pinterest.com">
-                    <img className="Footer__Logos__Pinterest" src="../pinterest.svg" alt="Pinterest"/></a>
-            </div>
-            {/* LOGOS */}
+            <SocialNetworkLogos/>
 
         </section>
     );

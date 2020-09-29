@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import Modal from "react-bootstrap/Modal"
+import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../../style/CookieModal.scss"
+import "../../style/CookieModal.scss";
 
 const CookieModal = () => {
 
@@ -10,8 +10,8 @@ const CookieModal = () => {
     const handleClose = () => setShow(false);
 
     useEffect(() => { // COOKIE MODAL 10 SECONDS AFTER MOUNT
-        setTimeout(() => setShow(true), 10000)
-    }, [])
+        setTimeout(() => setShow(true), 10000);
+    }, []);
 
 
     return (
@@ -27,7 +27,7 @@ const CookieModal = () => {
                 <Modal.Body className="CookieModalWindow__Body" closeButton>
 
                     {/* CLOSE BUTTON */}
-                    <i className="fas fa-times CookieModalWindow__CloseButton" onClick={handleClose}></i>
+                    <i className="fas fa-times CookieModalWindow__CloseButton" onClick={handleClose}/>
                     {/* CLOSE BUTTON */}
 
                     <p className="CookieModalWindow__Title">This website uses cookies</p>

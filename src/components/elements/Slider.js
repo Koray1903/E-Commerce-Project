@@ -1,7 +1,8 @@
 import React, {useState} from "react";
-import Carousel from "react-bootstrap/Carousel"
+import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../../style/Slider.scss"
+import "../../style/Slider.scss";
+import {Link} from 'react-router-dom';
 
 const Slider = () => {
 
@@ -13,7 +14,7 @@ const Slider = () => {
     };
     // CAROUSEL
 
-    const backgroundImageLinks = ["./slider/home-slider-1.png", "./slider/home-slider-2.png", "./slider/home-slider-3.png"]
+    const backgroundImageLinks = ["./slider/home-slider-1.png", "./slider/home-slider-2.png", "./slider/home-slider-3.png"];
 
     return (
         <section className="Slider">
@@ -40,9 +41,9 @@ const Slider = () => {
                                 voluptas
                                 sit aspernatur aut odit aut fugit, sed</p>
 
-                            {/* REDIRECT TO ANOTHER PAGE */}
-                            <button className="SliderItems__Info__Button">view more</button>
-                            {/* REDIRECT TO ANOTHER PAGE */}
+                            <Link to="/clp">
+                                <button className="SliderItems__Info__Button">view more</button>
+                            </Link>
                         </div>
 
                     </Carousel.Item>))}

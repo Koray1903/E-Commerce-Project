@@ -1,5 +1,5 @@
-import React from "react";
-import "../../style/DropdownFilters.scss"
+import React, {useState, useCallback} from "react";
+import "../../style/DropdownFilters.scss";
 
 const DropdownFilters = () => {
 
@@ -12,14 +12,20 @@ const DropdownFilters = () => {
     const showArray = ["16 per page", "32 per page", "64 per page"];
     // FILTER VALUES
 
+    const [selectedColorIndex, setSelectedColorIndex] = useState(0);
+
+    const handleClick = useCallback((index) => {
+        setSelectedColorIndex(index);
+    }, [selectedColorIndex]);
+
     return (
         <section className="DropdownFilters__Background">
 
-            <div className="DropdownFilters">
+            <div className="DropdownFilters" style={{background: `${colorArray[selectedColorIndex]}`}}>
 
                 {/* PRICE FILTER */}
                 <div className="DropdownFilters__Row">
-                    <label>Price</label>
+                    <label className="DropdownFilters__Row__Label">Price</label>
                     <select className="DropdownFilters__Filter">
                         {priceArray.map((element, index) => (
                             <option value={element} key={index}>{element}</option>
@@ -28,11 +34,22 @@ const DropdownFilters = () => {
                 </div>
                 {/* PRICE FILTER */}
 
-                {/* COLOR PALETTE - LATER */}
+                {/* COLOR PALETTE */}
+                <div className="DropdownFilters__Row">
+                    <label className="DropdownFilters__Row__Label">Color</label>
+                    <div className="DropdownFilters__Colors">
+                        {colorArray.map((color, index) => (
+                            <div style={{backgroundColor: `${color}`}} key={index}
+                                 className={`DropdownFilters__Colors__Color Dropdown ${selectedColorIndex === index ? "DropdownFilters__Colors__Color__Selected" : null}`}
+                                 onClick={() => handleClick(index)}/>
+                        ))}
+                    </div>
+                </div>
+                {/* COLOR PALETTE */}
 
                 {/* BRAND FILTER */}
                 <div className="DropdownFilters__Row">
-                    <label>Brand</label>
+                    <label className="DropdownFilters__Row__Label">Brand</label>
                     <select className="DropdownFilters__Filter">
                         {brandArray.map((element, index) => (
                             <option value={element} key={index}>{element}</option>
@@ -43,7 +60,7 @@ const DropdownFilters = () => {
 
                 {/* SORT FILTER */}
                 <div className="DropdownFilters__Row">
-                    <label>Sort by</label>
+                    <label className="DropdownFilters__Row__Label">Sort by</label>
                     <select className="DropdownFilters__Filter">
                         {sortArray.map((element, index) => (
                             <option value={element} key={index}>{element}</option>
@@ -54,7 +71,7 @@ const DropdownFilters = () => {
 
                 {/* SIZE FILTER */}
                 <div className="DropdownFilters__Row">
-                    <label>Size</label>
+                    <label className="DropdownFilters__Row__Label">Size</label>
                     <select className="DropdownFilters__Filter">
                         {sizeArray.map((element, index) => (
                             <option value={element} key={index}>{element}</option>
@@ -65,7 +82,7 @@ const DropdownFilters = () => {
 
                 {/* SHOW FILTER */}
                 <div className="DropdownFilters__Row">
-                    <label>Show</label>
+                    <label className="DropdownFilters__Row__Label">Show</label>
                     <select className="DropdownFilters__Filter">
                         {showArray.map((element, index) => (
                             <option value={element} key={index}>{element}</option>

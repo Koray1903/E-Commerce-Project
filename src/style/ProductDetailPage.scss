@@ -1,0 +1,412 @@
+$default-font: "Lato", sans-serif;
+// PADDING - 24PX
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .ProductDetailPage {
+    align-items: center;
+    background: #f2edea;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0 0 0;
+    text-align: center;
+  }
+
+  .breadcrumb {
+    background: #f2edea;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0;
+    width: 100%;
+  }
+
+  .breadcrumbNav {
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+  }
+
+  .breadcrumb-item {
+    display: inline;
+    font-family: $default-font;
+  }
+
+  .breadcrumb__home {
+    color: #84bc22;
+  }
+
+  .ProductDetailPage__Product {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    width: 90%;
+  }
+
+  .ProductDetailPage__Product__HorizontalLine {
+    background: #e8e4e1;
+    height: 3px;
+    margin: 0;
+    opacity: 0.5;
+    width: 25px;
+  }
+
+  .ProductDetailPage__Product__Text {
+    color: #45413e;
+    font-family: $default-font;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .ProductDetailPage__Body__Outer {
+    align-items: center;
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    text-align: center;
+    width: 90%;
+  }
+
+  .ProductDetailPage__Body__Inner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ProductDetailPage__Body__Inner__Price {
+    align-self: flex-start;
+    font-family: $default-font;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+    padding: 24px 0 12px 16px;
+  }
+
+  .ProductDetailPage__Body__Inner__ColorFilter {
+    align-self: flex-start;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: url("../images/caret-down-solid.svg"); // DOWN ICON
+    background-position: right 24px top 50%, 0 0;
+    background-repeat: no-repeat, repeat;
+    background-size: 10px auto, 100%;
+    border: 2px solid hsla(26, 5%, 26%, 0.5);
+    border-radius: 24px;
+    color: #45413e;
+    font-family: $default-font;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 12px 0 12px 16px;
+    padding: 8px 16px;
+    width: 200px;
+  }
+
+  .ProductDetailPage__Body__Inner__ColorFilter:focus {
+    outline: none;
+  }
+  //.ProductDetailPage__ColorFilter__Color {
+  //  border-radius: 8px;
+  //  height: 16px;
+  //  width: 16px;
+  //}
+
+  .ProductDetailPage__Body__Inner__Amount {
+    align-items: center;
+    align-self: flex-start;
+    background: transparent;
+    border: 2px hsla(26, 5%, 26%, 0.5) solid;
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0 12px 16px;
+    padding: 8px 16px;
+    width: 35%;
+  }
+
+  .ProductDetailPage__Body__Inner__Amount:focus {
+    //box-shadow: 0 0 0 3px -moz-mac-focusring;
+    outline: none;
+  }
+
+  .ProductDetailPage__Body__Inner__Amount__Input {
+    border: none;
+    font-family: $default-font;
+    text-align: center;
+    width: 50%;
+  }
+
+  .ProductDetailPage__Body__Inner__Amount__Input:focus {
+    outline: none;
+  }
+
+  .ProductDetailPage__Body__Inner__AddToCart {
+    align-self: flex-start;
+    background: #84bc22;
+    border: none;
+    border-radius: 24px;
+    color: white;
+    font-family: $default-font;
+    font-weight: 600;
+    margin: 12px 0 12px 16px;
+    padding: 8px 24px;
+    text-transform: uppercase;
+  }
+
+  .ProductDetailPage__Body__Inner__AddToCart:focus {
+    outline: none;
+  }
+
+  .ProductDetailPage__Body__Inner__Description {
+    font-family: $default-font;
+    padding: 12px 16px 12px 16px;
+    text-align: justify;
+  }
+
+  .ProductDetailPage__Body__Inner__ReadMore {
+    align-self: flex-start;
+    color: #84bc22;
+    font-family: $default-font;
+    padding: 12px 0 12px 16px;
+  }
+
+  .ProductDetailPage__Body__Inner__ShareLogos {
+    align-items: center;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 0 12px 16px;
+    width: 200px;
+  }
+
+  .ProductDetailPage__Body__Inner__ShareLogos__Text {
+    font-family: $default-font;
+    margin: 0;
+  }
+
+
+  .ProductDetailPageBackground {
+    background: #f2edea;
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .ProductDetailPage {
+    align-items: center;
+    background: #f2edea;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0 0 0;
+    text-align: center;
+  }
+
+  // BREADCRUMB
+  .breadcrumb {
+    align-items: center;
+    background: #f2edea;
+    display: flex;
+    height: min-content;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .breadcrumb-item {
+    color: #8dc73e;
+    display: inline;
+    font-family: $default-font;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .breadcrumb-item {
+    a, a:link, a:visited, a:hover, a:active {
+      color: #84bc22;
+      display: inline;
+      text-decoration: none;
+    }
+  }
+  // BREADCRUMB
+
+  .ProductDetailPage__Product {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    width: 90%;
+  }
+
+  .ProductDetailPage__Product__HorizontalLine {
+    background: #e8e4e1;
+    height: 3px;
+    margin: 0;
+    opacity: 0.5;
+    width: 25px;
+  }
+
+  .ProductDetailPage__Product__Text {
+    color: #45413e;
+    font-family: $default-font;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .ProductDetailPage__Body__Outer {
+    align-items: flex-start;
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    width: 90%;
+  }
+
+  .ProductDetailPage__Body__Inner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .ProductDetailPage__Body__Inner__Price {
+    align-self: flex-start;
+    font-family: $default-font;
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0;
+    padding: 24px 0 12px 16px;
+  }
+
+  .ProductDetailPage__Body__Inner__ColorFilter {
+    align-self: flex-start;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: url("../images/caret-down-solid.svg"); // DOWN ICON
+    background-position: right 24px top 50%, 0 0;
+    background-repeat: no-repeat, repeat;
+    background-size: 10px auto, 100%;
+    border: 2px solid hsla(26, 5%, 26%, 0.5);
+    border-radius: 24px;
+    color: #45413e;
+    font-family: $default-font;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 12px 0 12px 16px;
+    padding: 8px 16px;
+    width: 150px;
+  }
+
+  .ProductDetailPage__Body__Inner__ColorFilter:focus {
+    outline: none;
+  }
+  //.ProductDetailPage__ColorFilter__Color {
+  //  border-radius: 8px;
+  //  height: 16px;
+  //  width: 16px;
+  //}
+
+  .ProductDetailPage__Body__Inner__Amount {
+    align-items: center;
+    align-self: flex-start;
+    background: transparent;
+    border: 2px hsla(26, 5%, 26%, 0.5) solid;
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0 12px 16px;
+    padding: 8px 16px;
+    width: 120px;
+  }
+
+  .ProductDetailPage__Body__Inner__Amount:focus {
+    //box-shadow: 0 0 0 3px -moz-mac-focusring;
+    outline: none;
+  }
+
+  .ProductDetailPage__Body__Inner__Amount__Input {
+    border: none;
+    font-family: $default-font;
+    text-align: center;
+    width: 50%;
+  }
+
+  .ProductDetailPage__Body__Inner__Amount__Input:focus {
+    outline: none;
+  }
+
+  .ProductDetailPage__Body__Inner__AddToCart {
+    align-self: flex-start;
+    background: #84bc22;
+    border: none;
+    border-radius: 24px;
+    color: white;
+    font-family: $default-font;
+    font-weight: 600;
+    margin: 12px 0 12px 16px;
+    padding: 8px 24px;
+    text-transform: uppercase;
+  }
+
+  .ProductDetailPage__Body__Inner__AddToCart:focus {
+    outline: none;
+  }
+
+  .ProductDetailPage__Body__Inner__Description {
+    color: black;
+    font-family: $default-font;
+    height: 175px;
+    line-height: 25px;
+    margin: 12px 16px 12px 16px;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    width: 400px;
+  }
+
+  .ProductDetailPage__Body__Inner__ReadMore {
+    align-self: flex-start;
+    color: #84bc22;
+    cursor: pointer;
+    font-family: $default-font;
+    padding: 12px 0 12px 16px;
+  }
+
+  .ProductDetailPage__Body__Inner__ShareLogos {
+    align-items: center;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 0 12px 16px;
+    width: 200px;
+  }
+
+  .ProductDetailPage__Body__Inner__ShareLogos__Text {
+    font-family: $default-font;
+    margin: 0;
+  }
+
+  .ProductDetailPageBackground {
+    background: #f2edea;
+  }
+}

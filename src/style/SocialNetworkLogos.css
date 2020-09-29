@@ -1,0 +1,60 @@
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .SocialNetworkLogos {
+    align-items: center;
+    display: flex;
+    height: 18px;
+    justify-content: space-between;
+    width: 120px;
+  }
+
+  .SocialNetworkLogos__Facebook {
+    height: 18px;
+    width: 9px;
+  }
+
+  .SocialNetworkLogos__Google {
+    height: 17px;
+    width: 19px;
+  }
+
+  .SocialNetworkLogos__Twitter {
+    height: 14px;
+    width: 17px;
+  }
+
+  .SocialNetworkLogos__Pinterest {
+    height: 17px;
+    width: 14px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .SocialNetworkLogos {
+    align-items: center;
+    display: flex;
+    height: 18px;
+    justify-content: space-between;
+    width: 120px;
+  }
+
+  .SocialNetworkLogos__Facebook {
+    height: 18px;
+    width: 9px;
+  }
+
+  .SocialNetworkLogos__Google {
+    height: 17px;
+    width: 19px;
+  }
+
+  .SocialNetworkLogos__Twitter {
+    height: 14px;
+    width: 17px;
+  }
+
+  .SocialNetworkLogos__Pinterest {
+    height: 17px;
+    width: 14px;
+  }
+}
+
+/*# sourceMappingURL=SocialNetworkLogos.css.map */

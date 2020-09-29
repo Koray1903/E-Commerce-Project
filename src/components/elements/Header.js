@@ -1,42 +1,68 @@
 import React, {useState, useCallback} from "react";
 import {Link} from "react-router-dom";
-import "../../style/Header.scss"
+import "../../style/Header.scss";
 import Navigation from "./Navigation";
+import Fixed from "./Fixed";
 
-const Header = () => {
+const Header = ({screenWidth}) => {
 
-    const [showNavigation, setShowNavigation] = useState(false)
+    const [showNavigation, setShowNavigation] = useState(false);
 
     const handleShowNavigation = useCallback(() => {
-        setShowNavigation(!showNavigation)
-    }, [showNavigation])
+        setShowNavigation(!showNavigation);
+    }, [showNavigation]);
 
     return (
-        <>
-            <section className="Header">
+        <section className="Header">
+            {screenWidth < 768 ?
+                // MOBILE VERSION
+                <div className="Header__Mobile">
+                    {!showNavigation ?
+                        <i className="fas fa-bars Header__Mobile__Hamburger__Open"
+                           onClick={handleShowNavigation}/>
+                        :
 
-                {!showNavigation ?
-                    <div onClick={handleShowNavigation} className="Header__Hamburger__Open">
-                        <div className="Header__Hamburger__Open__Line"></div>
-                        <div className="Header__Hamburger__Open__Line"></div>
-                        <div className="Header__Hamburger__Open__Line"></div>
+                        <i className="fas fa-times Header__Mobile__Hamburger__Close"
+                           onClick={handleShowNavigation}/>
+                    }
+
+                    <Link className="Header__Mobile__Logo__Icon" to="/">
+                        <img className="Header__Mobile__Logo__Icon" src="../header/Logo.png" alt="logo"/>
+                    </Link>
+                </div>
+                // MOBILE VERSION
+                :
+                // TABLET & DESKTOP VERSION
+                <div className="Header__TabletDesktop">
+                    <Link to="/">
+                        <img className="Header__TabletDesktop__Icon" src="../header/Logo.png" alt="logo"/>
+                    </Link>
+                    <div className="Header__TabletDesktop__Text">
+                        <p className="Header__TabletDesktop__Text__1">osf</p>
+                        <p className="Header__TabletDesktop__Text__2">academy</p>
                     </div>
-                    :
-                    <img
-                        onClick={handleShowNavigation}
-                        className="Header__Hamburger__Close" src="../header/HamburgerClose.png"/>}
+                </div>
+                // TABLET & DESKTOP VERSION
+            }
 
-                <Link className="Header__Logo" to="/">
-                    <img src="../header/Logo.png" alt="logo"/>
-                </Link>
-            </section>
 
-            {/* NAVIGATION MENU */}
-            {showNavigation ? <Navigation/> : null}
-            {/* NAVIGATION MENU */}
+            {/* MOBILE VERSION NAVIGATION MENU */}
+            {screenWidth < 768 && showNavigation ? <Navigation screenWidth={screenWidth}/> : null}
+            {/* MOBILE VERSION NAVIGATION MENU */}
 
-            {/* FIXED COMPONENT WILL BE HERE IN DESKTOP VERSION */}
-        </>
+            {/* TABLET & DESKTOP VERSION NAVIGATION MENU */}
+            {screenWidth > 767 ? <Navigation screenWidth={screenWidth}/> : null}
+            {/* TABLET & DESKTOP VERSION NAVIGATION MENU */}
+
+
+            {/* LANGUAGE & CURRENCY LATER */}
+            {/* {screenWidth > 767 ? <LanguageCurrency/> : null} */}
+
+
+            {/* TABLET & DESKTOP VERSION FIXED */}
+            {screenWidth > 767 ? <Fixed/> : null}
+            {/* TABLET & DESKTOP VERSION FIXED */}
+        </section>
     );
 };
 

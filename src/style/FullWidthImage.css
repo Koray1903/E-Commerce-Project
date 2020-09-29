@@ -1,27 +1,54 @@
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .FullWidthImage {
     align-items: center;
     background: url("../images/FullWidthImage.png") no-repeat center center;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    font-family: "Lato", sans-serif !important;
     justify-content: center;
     min-height: 183px;
   }
 
   .FullWidthImage__Title {
     color: #ffffff;
+    font-family: "Lato", sans-serif;
     font-size: 30px;
     font-weight: 800;
   }
 
   .FullWidthImage__Text {
     color: #ffffff;
+    font-family: "Lato", sans-serif;
     font-size: 14px;
     font-weight: 400;
-    height: 31px;
-    overflow-y: hidden;
+    text-align: center;
+    width: 276px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .FullWidthImage {
+    align-items: center;
+    background: url("../images/FullWidthImage.png") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    justify-content: center;
+  }
+
+  .FullWidthImage__Title {
+    color: #ffffff;
+    font-family: "Lato", sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+  }
+
+  .FullWidthImage__Text {
+    color: #ffffff;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
     width: 276px;
   }
 }

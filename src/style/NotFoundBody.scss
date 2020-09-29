@@ -1,15 +1,18 @@
-@media only screen and (min-width: 320px) {
+$default-font: "Lato", sans-serif;
+// PADDING - 24PX
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .NotFoundPage {
     align-items: center;
     background: #f1edea;
     display: flex;
     flex-direction: column;
-    font-family: 'Lato', sans-serif !important;
     justify-content: center;
     padding-bottom: 50px;
+    padding-top: 100px;
   }
 
-  .NotFoundPageBody{
+  .NotFoundPageBody {
     align-items: center;
     background: #f2edea;
     display: flex;
@@ -18,15 +21,24 @@
     justify-content: space-around;
   }
 
+  // BREADCRUMB
   .breadcrumb {
+    align-items: center;
     background: #f2edea;
+    display: flex;
+    height: min-content;
+    justify-content: center;
     margin: 0;
-    padding: 16px;
+    padding: 0;
   }
 
-  .breadcrumb__home {
-    color: #84bc22;
+  .breadcrumb-item {
+    a, a:link, a:visited, a:hover, a:active {
+      color: #84bc22;
+      text-decoration: none;
+    }
   }
+  // BREADCRUMB
 
   .NotFoundPage__Services {
     align-content: center;
@@ -46,13 +58,13 @@
 
   .NotFoundPage__Services__Text {
     color: #45413e;
-    font-family: 'Lato', sans-serif !important;
+    font-family: $default-font;
     font-size: 31px;
     font-weight: 700;
     margin: 0;
   }
 
-  .NotFoundPage__Message {
+  .NotFoundPage__Message__Outer {
     align-items: flex-start;
     background: white;
     display: flex;
@@ -62,37 +74,45 @@
     width: 90%;
   }
 
-  .NotFoundPage__Message__One {
+  .NotFoundPage__Message__Outer__One {
     color: #84bc22;
+    font-family: $default-font;
     font-size: 113px;
     font-weight: 700;
   }
 
-  .NotFoundPage__Message__Two {
+  .NotFoundPage__Message__Inner {
+  }
+
+  .NotFoundPage__Message__Inner__Two {
+    font-family: $default-font;
     font-size: 24px;
     font-weight: 800;
   }
 
-  .NotFoundPage__Message__Three {
+  .NotFoundPage__Message__Inner__Three {
+    font-family: $default-font;
     font-size: 16px;
     font-weight: 300;
   }
 
-  .NotFoundPage__Message__Four {
+  .NotFoundPage__Message__Inner__Four {
     color: #84bc22;
+    font-family: $default-font;
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 48px;
     margin-top: 36px;
   }
 
-  .NotFoundPage__Message__SearchTitle {
+  .NotFoundPage__Message__Inner__SearchTitle {
+    font-family: $default-font;
     font-size: 24px;
     font-weight: 800;
   }
 
 
-  .NotFoundPage__Message__Search {
+  .NotFoundPage__Message__Inner__Search {
     align-self: center;
     border: 2px solid #e8e2d6;
     border-radius: 24px;
@@ -103,10 +123,170 @@
     width: 90%;
   }
 
-  .NotFoundPage__Message__SearchInput {
+  .NotFoundPage__Message__Inner__Search__Input {
     border: none;
+    font-family: $default-font;
   }
 
-  .NotFoundPage__Message__SearchIcon {
+  .NotFoundPage__Message__Inner__Search__Input:focus {
+    outline: none;
+  }
+
+  .NotFoundPage__Message__Inner__Search__Icon {
+    color: gray;
+    font-size: 23px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .NotFoundPage {
+    align-items: center;
+    background: #f1edea;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+
+  .NotFoundPageBody {
+    align-items: center;
+    background: #f2edea;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  // BREADCRUMB
+  .breadcrumb {
+    background: #f2edea;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0;
+    width: max-content;
+  }
+
+  .breadcrumbNav {
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+  }
+
+  .breadcrumb-item {
+    display: inline;
+  }
+
+  .breadcrumb__home {
+    color: #84bc22;
+  }
+  // BREADCRUMB
+
+  .NotFoundPage__Services {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .NotFoundPage__Services__HorizontalLine {
+    background: #ffffff;
+    height: 3px;
+    margin: 0;
+    opacity: 0.5;
+    width: 30%;
+  }
+
+  .NotFoundPage__Services__Text {
+    color: #45413e;
+    font-family: $default-font;
+    font-size: 48px;
+    font-weight: 800;
+    margin: 0;
+  }
+
+  .NotFoundPage__Message__Outer {
+    align-items: center;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 48px;
+    width: 90%;
+  }
+
+  .NotFoundPage__Message__Outer__One {
+    color: #84bc22;
+    font-family: $default-font;
+    font-size: 150px;
+    font-weight: 800;
+  }
+
+  .NotFoundPage__Message__Inner {
+    width: 50%;
+  }
+
+  .NotFoundPage__Message__Inner__Two {
+    color: black;
+    font-family: $default-font;
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .NotFoundPage__Message__Inner__Three {
+    color: black;
+    font-family: $default-font;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .NotFoundPage__Message__Inner__Four {
+    color: #84bc22;
+    font-family: $default-font;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 48px;
+    margin-top: 36px;
+  }
+
+  .NotFoundPage__Message__Inner__SearchTitle {
+    font-family: $default-font;
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+
+  .NotFoundPage__Message__Inner__Search {
+    align-items: center;
+    align-self: center;
+    border: 2px solid #e8e2d6;
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 8px 12px;
+    width: 90%;
+  }
+
+  .NotFoundPage__Message__Inner__Search__Input {
+    border: none;
+    color: black;
+    font-family: $default-font;
+    font-size: 16px;
+  }
+
+  .NotFoundPage__Message__Inner__Search__Input:focus {
+    outline: none;
+  }
+
+  .NotFoundPage__Message__Inner__Search__Icon {
+    color: gray;
+    font-size: 23px;
   }
 }

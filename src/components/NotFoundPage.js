@@ -4,18 +4,20 @@ import Footer from "./elements/Footer";
 import Fixed from "./elements/Fixed";
 import NotFoundBody from "./elements/NotFoundBody";
 
-const NotFoundPage = () => {
+const NotFoundPage = ({screenWidth}) => {
 
     return (
-        <>
-            <Header/>
+        <section>
+            <Header screenWidth={screenWidth}/>
 
             <NotFoundBody/>
 
-            <Footer/>
+            <Footer screenWidth={screenWidth}/>
 
-            <Fixed/>
-        </>
+            {/* ONLY IN MOBILE VERSION */}
+            {screenWidth < 768 ? <Fixed screenWidth={screenWidth}/> : null}
+            {/* ONLY IN MOBILE VERSION */}
+        </section>
     );
 };
 

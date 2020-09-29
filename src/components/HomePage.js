@@ -8,35 +8,45 @@ import Benefits from "./elements/Benefits";
 import Footer from "./elements/Footer";
 import Fixed from "./elements/Fixed";
 import CookieModal from "./elements/CookieModal";
+import FeaturedProducts from "./elements/FeaturedProducts";
+import "../style/HomePage.scss";
 
 const HomePage = ({screenWidth}) => {
 
     return (
-        <>
-            <Header/>
+        <section>
+            <Header screenWidth={screenWidth}/>
 
-            <Slider/>
+            <div className="SliderSummerSalesBackground"> {/* ADD CSS LATER */}
+                <Slider/>
 
-            {/* COOKIE MODAL - APPEARS AFTER 10 SECONDS */}
-            <CookieModal/>
-            {/* COOKIE MODAL - APPEARS AFTER 10 SECONDS */}
+                {/* COOKIE MODAL - APPEARS AFTER 10 SECONDS */}
+                {/*<CookieModal/>*/}
+                {/* COOKIE MODAL - APPEARS AFTER 10 SECONDS */}
 
-            {/* NOT AVAILABLE IN MOBILE VERSION */}
-            <SummerSales/>
-            {/* NOT AVAILABLE IN MOBILE VERSION */}
+                {/* NOT AVAILABLE IN MOBILE VERSION */}
+                {screenWidth > 767 ? <SummerSales/> : null}
+                {/* NOT AVAILABLE IN MOBILE VERSION */}
+            </div>
 
-            <PopularItems screenWidth={screenWidth}/>
+            <div className="PopularItemsBackground">
+                <PopularItems screenWidth={screenWidth}/>
+            </div>
 
             <FullWidthImage/>
 
+            {/* NOT AVAILABLE IN MOBILE VERSION */}
+            {screenWidth > 767 ? <FeaturedProducts/> : null}
+            {/* NOT AVAILABLE IN MOBILE VERSION */}
+
             <Benefits/>
 
-            <Footer/>
+            <Footer screenWidth={screenWidth}/>
 
-            {/* AT BOTTOM ONLY IN MOBILE VERSION */}
-            <Fixed/>
-            {/* AT BOTTOM ONLY IN MOBILE VERSION */}
-        </>
+            {/* AT BOTTOM IN MOBILE VERSION */}
+            {screenWidth < 768 ? <Fixed/> : null}
+            {/* AT BOTTOM IN MOBILE VERSION */}
+        </section>
     );
 };
 
