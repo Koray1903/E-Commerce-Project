@@ -84,15 +84,6 @@
     display: none;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .Footer__Option__Icon__Up {
-    display: none;
-  }
-
-  .Footer__Option__Icon__Down {
-    display: none;
-  }
-}
 @media only screen and (min-width: 1024px) {
   .Footer {
     align-items: flex-start;

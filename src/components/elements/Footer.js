@@ -54,11 +54,14 @@ const Footer = ({screenWidth}) => {
                         <p className="Footer__Option__Text">contact</p>
 
                         {/* ONLY IN MOBILE VERSION */}
-                        {!showContacts && mobileVersionBoolean ?
-                            <i className={`fas fa-caret-down Footer__Option__Icon__Down`}/>
-                            :
-                            <i className={`fas fa-caret-up Footer__Option__Icon__Up`}/>
-                        }
+                        {mobileVersionBoolean ?
+                            <>
+                                {!showContacts ?
+                                    <i className={`fas fa-caret-down Footer__Option__Icon__Down`}/>
+                                    :
+                                    <i className={`fas fa-caret-up Footer__Option__Icon__Up`}/>}
+                            </>
+                            : null}
                         {/* ONLY IN MOBILE VERSION */}
                     </div>
 
@@ -84,11 +87,14 @@ const Footer = ({screenWidth}) => {
                         <p className="Footer__Option__Text">categories</p>
 
                         {/* ONLY IN MOBILE VERSION */}
-                        {!showCategories && mobileVersionBoolean ?
-                            <i className={`fas fa-caret-down Footer__Option__Icon__Down`}/>
-                            :
-                            <i className={`fas fa-caret-up Footer__Option__Icon__Up`}/>
-                        }
+                        {mobileVersionBoolean ?
+                            <>
+                                {!showCategories ?
+                                    <i className={`fas fa-caret-down Footer__Option__Icon__Down`}/>
+                                    :
+                                    <i className={`fas fa-caret-up Footer__Option__Icon__Up`}/>}
+                            </>
+                            : null}
                         {/* ONLY IN MOBILE VERSION */}
                     </div>
 
@@ -109,11 +115,14 @@ const Footer = ({screenWidth}) => {
                         <p className="Footer__Option__Text">about</p>
 
                         {/*ONLY IN MOBILE VERSION*/}
-                        {!showAbout && mobileVersionBoolean ?
-                            <i className={`fas fa-caret-down Footer__Option__Icon__Down`}/>
-                            :
-                            <i className={`fas fa-caret-up Footer__Option__Icon__Up`}/>
-                        }
+                        {mobileVersionBoolean ?
+                            <>
+                                {!showAbout ?
+                                    <i className={`fas fa-caret-down Footer__Option__Icon__Down`}/>
+                                    :
+                                    <i className={`fas fa-caret-up Footer__Option__Icon__Up`}/>}
+                            </>
+                            : null}
                         {/*ONLY IN MOBILE VERSION*/}
                     </div>
 
