@@ -8,23 +8,43 @@
   }
 
   .SocialNetworkLogos__Facebook {
+    color: gray;
     height: 18px;
     width: 9px;
   }
 
+  .SocialNetworkLogos__Facebook:hover {
+    color: #84bc22;
+  }
+
   .SocialNetworkLogos__Google {
+    color: gray;
     height: 17px;
     width: 19px;
   }
 
+  .SocialNetworkLogos__Google:hover {
+    color: #84bc22;
+  }
+
   .SocialNetworkLogos__Twitter {
+    color: gray;
     height: 14px;
     width: 17px;
   }
 
+  .SocialNetworkLogos__Twitter:hover {
+    color: #84bc22;
+  }
+
   .SocialNetworkLogos__Pinterest {
+    color: gray;
     height: 17px;
     width: 14px;
+  }
+
+  .SocialNetworkLogos__Pinterest:hover {
+    color: #84bc22;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -37,23 +57,43 @@
   }
 
   .SocialNetworkLogos__Facebook {
+    color: gray;
     height: 18px;
     width: 9px;
   }
 
+  .SocialNetworkLogos__Facebook:hover {
+    color: #84bc22;
+  }
+
   .SocialNetworkLogos__Google {
+    color: gray;
     height: 17px;
     width: 19px;
   }
 
+  .SocialNetworkLogos__Google:hover {
+    color: #84bc22;
+  }
+
   .SocialNetworkLogos__Twitter {
+    color: gray;
     height: 14px;
     width: 17px;
   }
 
+  .SocialNetworkLogos__Twitter:hover {
+    color: #84bc22;
+  }
+
   .SocialNetworkLogos__Pinterest {
+    color: gray;
     height: 17px;
     width: 14px;
+  }
+
+  .SocialNetworkLogos__Pinterest:hover {
+    color: #84bc22;
   }
 }
 

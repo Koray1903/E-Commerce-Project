@@ -1,5 +1,4 @@
 $default-font: "Lato", sans-serif;
-//  padding: 24px;
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .Footer {
@@ -8,42 +7,59 @@ $default-font: "Lato", sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 100px;
-    min-height: 250px;
-    padding: 24px;
+    min-height: 450px;
+    padding: 24px 24px 125px 24px;
   }
 
   .Footer__Option__Outer {
+    width: 100%;
+  }
+
+  .Footer__Option__Title {
     align-items: center;
+    color: #45413e;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     margin: 12px 0;
-    width: 100%;
   }
 
   .Footer__Option__Inner {
-
     width: 100%;
+
+    a, a:link, a:visited, a:active {
+      color: #45413e;
+      margin: 6px 0;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #84bc22;
+      text-decoration: underline;
+    }
+
+    .Footer__Text:hover {
+      color: #84bc22;
+      text-decoration: underline;
+    }
   }
 
   .Footer__Option__Text {
-    color: #333333;
+    color: #45413e;
     font-family: $default-font;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     margin: 0;
-    padding: 0;
     text-transform: uppercase;
   }
 
-  .Footer__Option__Up {
+  .Footer__Option__Icon__Up {
     height: 6px;
     opacity: 0.7;
     width: 8px;
   }
 
-  .Footer__Option__Down {
+  .Footer__Option__Icon__Down {
     height: 7px;
     opacity: 0.7;
     width: 8px;
@@ -54,9 +70,19 @@ $default-font: "Lato", sans-serif;
     color: #45413e;
     display: block;
     font-family: $default-font;
+    font-size: 16px;
     font-weight: 400;
-    margin: 12px 0;
+    margin: 24px 0;
     text-align: left;
+  }
+
+  .Footer__Text__Address {
+    align-self: flex-start;
+    color: #45413e;
+    font-family: $default-font;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
   }
 
   .Element__Display {
@@ -65,77 +91,116 @@ $default-font: "Lato", sans-serif;
   .Element__Hide {
     display: none;
   }
-
-  a {
-    margin: 6px 0;
-  }
 }
+
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
+
+  .Footer__Option__Icon__Up {
+    display: none;
+  }
+
+  .Footer__Option__Icon__Down {
+    display: none;
+  }
 }
+
 
 @media only screen and (min-width: 1024px) {
   .Footer {
     align-items: flex-start;
     background-color: #ffffff;
     display: flex;
-    flex-basis: min-content;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 340px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     padding: 24px;
+    width: 1300px;
   }
 
   .Footer__Option__Outer {
-    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .Footer__Option__Title {
+    margin-bottom: 16px;
   }
 
   .Footer__Option__Inner {
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
-    max-height: 240px;
+    max-height: 280px;
 
+    a, a:link, a:visited, a:active {
+      color: #45413e;
+      margin: 6px 0;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #84bc22;
+      text-decoration: underline;
+    }
+
+    .Footer__Text:hover {
+      color: #84bc22;
+      text-decoration: underline;
+    }
   }
 
   .Footer__Option__Inner__Contacts__Desktop {
     justify-content: space-between;
-    width: 230px;
+    min-width: 230px;
   }
 
   .Footer__Option__Inner__Categories__Desktop {
-    width: 700px;
+    min-width: 650px;
   }
 
   .Footer__Option__Inner__About__Desktop {
-    height: 300px;
-    width: 80px;
+    min-width: 100px;
   }
 
   .Footer__Option__Text {
-    color: #333333;
+    color: #45413e;
     font-family: $default-font;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
     margin: 0;
     padding: 0;
     text-transform: uppercase;
   }
 
-
   .Footer__Text {
     align-self: flex-start;
     color: #45413e;
-    display: block;
     font-family: $default-font;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
-    text-align: left;
+    margin-bottom: 10px;
   }
 
-  a {
-    margin: 6px 0;
+  .Footer__Text__Address {
+    align-self: flex-start;
+    color: #45413e;
+    font-family: $default-font;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .Footer__Option__Icon__Up {
+    display: none;
+  }
+
+  .Footer__Option__Icon__Down {
+    display: none;
   }
 }

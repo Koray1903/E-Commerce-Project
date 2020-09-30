@@ -1,4 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useCallback} from "react";
+import {useSelector, useDispatch} from "react-redux";
+import {enableCookies} from "../../redux/actions.js";
 import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../style/CookieModal.scss";
@@ -9,8 +11,15 @@ const CookieModal = () => {
 
     const handleClose = () => setShow(false);
 
+    const dispatch = useDispatch();
+
     useEffect(() => { // COOKIE MODAL 10 SECONDS AFTER MOUNT
         setTimeout(() => setShow(true), 10000);
+    }, []);
+
+    const handleClick = useCallback(() => {
+        dispatch(enableCookies());
+        handleClose();
     }, []);
 
 
@@ -41,7 +50,7 @@ const CookieModal = () => {
                             className="CookieModalWindow__Text__Colored">Cookies Policy Page</span>.</p>
 
                     {/* REDUX - LOCAL STORAGE - LATER */}
-                    <button className="CookieModalWindow__AcceptButton" onClick={handleClose}>accept</button>
+                    <button className="CookieModalWindow__AcceptButton" onClick={handleClick}>accept</button>
                     {/* REDUX - LOCAL STORAGE - LATER */}
                 </Modal.Body>
 

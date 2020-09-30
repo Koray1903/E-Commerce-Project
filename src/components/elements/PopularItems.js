@@ -1,22 +1,51 @@
-import React, {useState} from "react";
+import React, {useCallback, useState} from "react";
 import Carousel from "react-bootstrap/Carousel";
 import {Link} from "react-router-dom";
+import {addToCart, addToWishlist} from "../../redux/actions.js";
+import {useDispatch, useSelector} from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../style/PopularItems.scss";
 
 const PopularItems = ({screenWidth}) => {
 
-    // CAROUSEL
+    // REDUX
+    const dispatch = useDispatch();
+    const PopularProducts = useSelector(state => state.shopReducer.PopularProducts);
+
+    const handleAddToCart = useCallback(() => {
+        dispatch(addToCart(1));
+    }, []);
+
+    const handleAddToWishlist = useCallback(() => {
+        dispatch(addToWishlist(1));
+    }, []);
+    // REDUX
+
+    const handleClick = useCallback(() => {
+        dispatch(addToCart(1));
+        setPurchaseStatus(!purchaseStatus);
+    }, []);
+
+    // CAROUSEL - ONLY IN MOBILE VERSION
     const [index, setIndex] = useState(0);
 
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);
     };
-    // CAROUSEL
+    // CAROUSEL - ONLY IN MOBILE VERSION
 
     // FOR PRODUCT TWO
     const [purchaseStatus, setPurchaseStatus] = useState(false);
     // FOR PRODUCT TWO
+
+    // EXTRA LOADED PRODUCTS
+    const [loadedProducts, setLoadedProducts] = useState(0);
+
+    const handleLoadClick = useCallback(() => {
+        setLoadedProducts(loadedProducts + 4);
+    }, [loadedProducts]);
+    // EXTRA LOADED PRODUCTS
+
 
     return (
         <section className="PopularItems">
@@ -27,12 +56,10 @@ const PopularItems = ({screenWidth}) => {
                 <div className="PopularItems__Title__HorizontalLine"/>
             </div>
 
-            {/*NO CAROUSEL IN DESKTOP VERSION*/}
-            {/*LOAD MORE BUTTON IN DESKTOP VERSION*/}
-
             {/* MOBILE */}
             {screenWidth < 768 ?
-                <Carousel activeIndex={index} onSelect={handleSelect} className="PopularItems__Carousel">
+                <Carousel activeIndex={index} onSelect={handleSelect} className="PopularItems__Mobile__Carousel">
+
                     {/* PRODUCT ONE */}
                     <Carousel.Item className="PopularItems__SingleItem">
                         <img className="PopularItems__Image"
@@ -47,15 +74,13 @@ const PopularItems = ({screenWidth}) => {
 
                         <div className="PopularItems__SingleItem__OnHover">
                             <div className="PopularItems__SingleItem__OnHover__IconBackground">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/cart.svg" alt="cart"/>
+                                <i className="fas fa-plus PopularItems__SingleItem__OnHover__CartIcon"
+                                   onClick={handleAddToCart}/>
                             </div>
 
                             <div className="PopularItems__SingleItem__OnHover__IconBackground">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/favorite.svg" alt="favorite"/>
+                                <i className="fas fa-heart PopularItems__SingleItem__OnHover__FavoriteIcon"
+                                   onClick={handleAddToWishlist}/>
                             </div>
                         </div>
                     </Carousel.Item>
@@ -75,8 +100,8 @@ const PopularItems = ({screenWidth}) => {
                                 <p className="PopularItems__Info__Extra__Price">$ 659.55</p>
                                 <button
                                     className={`${purchaseStatus ? `PopularItems__Info__Extra__BuyNow__Disabled` : `PopularItems__Info__Extra__BuyNow__Enabled`}`}
-                                    onClick={() => setPurchaseStatus(!purchaseStatus)}
-                                    disabled={purchaseStatus} // REDUX
+                                    onClick={handleClick}
+                                    disabled={purchaseStatus}
                                 >buy now
                                 </button>
                             </div>
@@ -99,15 +124,13 @@ const PopularItems = ({screenWidth}) => {
 
                         <div className="PopularItems__SingleItem__OnHover">
                             <div className="PopularItems__SingleItem__OnHover__IconBackground">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/cart.svg" alt="cart"/>
+                                <i className="fas fa-plus PopularItems__SingleItem__OnHover__CartIcon"
+                                   onClick={handleAddToCart}/>
                             </div>
 
                             <div className="PopularItems__SingleItem__OnHover__IconBackground">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/favorite.svg" alt="favorite"/>
+                                <i className="fas fa-heart PopularItems__SingleItem__OnHover__FavoriteIcon"
+                                   onClick={handleAddToWishlist}/>
                             </div>
                         </div>
                     </Carousel.Item>
@@ -126,15 +149,13 @@ const PopularItems = ({screenWidth}) => {
 
                         <div className="PopularItems__SingleItem__OnHover">
                             <div className="PopularItems__SingleItem__OnHover__IconBackground">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/cart.svg" alt="cart"/>
+                                <i className="fas fa-plus PopularItems__SingleItem__OnHover__CartIcon"
+                                   onClick={handleAddToCart}/>
                             </div>
 
                             <div className="PopularItems__SingleItem__OnHover__IconBackground">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/favorite.svg" alt="favorite"/>
+                                <i className="fas fa-heart PopularItems__SingleItem__OnHover__FavoriteIcon"
+                                   onClick={handleAddToWishlist}/>
                             </div>
                         </div>
                     </Carousel.Item>
@@ -153,15 +174,13 @@ const PopularItems = ({screenWidth}) => {
 
                         <div className="PopularItems__SingleItem__OnHover">
                             <div className="PopularItems__SingleItem__OnHover__IconBackground">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/cart.svg" alt="cart"/>
+                                <i className="fas fa-plus PopularItems__SingleItem__OnHover__CartIcon"
+                                   onClick={handleAddToCart}/>
                             </div>
 
                             <div className="PopularItems__SingleItem__OnHover__IconBackground">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/favorite.svg" alt="favorite"/>
+                                <i className="fas fa-heart PopularItems__SingleItem__OnHover__FavoriteIcon"
+                                   onClick={handleAddToWishlist}/>
                             </div>
                         </div>
                     </Carousel.Item>
@@ -180,15 +199,13 @@ const PopularItems = ({screenWidth}) => {
 
                         <div className="PopularItems__SingleItem__OnHover">
                             <div className="PopularItems__SingleItem__OnHover__IconBackground">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/cart.svg" alt="cart"/>
+                                <i className="fas fa-plus PopularItems__SingleItem__OnHover__CartIcon"
+                                   onClick={handleAddToCart}/>
                             </div>
 
                             <div className="PopularItems__SingleItem__OnHover__IconBackground">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/favorite.svg" alt="favorite"/>
+                                <i className="fas fa-heart PopularItems__SingleItem__OnHover__FavoriteIcon"
+                                   onClick={handleAddToWishlist}/>
                             </div>
                         </div>
                     </Carousel.Item>
@@ -207,15 +224,13 @@ const PopularItems = ({screenWidth}) => {
 
                         <div className="PopularItems__SingleItem__OnHover">
                             <div className="PopularItems__SingleItem__OnHover__IconBackground">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/cart.svg" alt="cart"/>
+                                <i className="fas fa-plus PopularItems__SingleItem__OnHover__CartIcon"
+                                   onClick={handleAddToCart}/>
                             </div>
 
                             <div className="PopularItems__SingleItem__OnHover__IconBackground">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/favorite.svg" alt="favorite"/>
+                                <i className="fas fa-heart PopularItems__SingleItem__OnHover__FavoriteIcon"
+                                   onClick={handleAddToWishlist}/>
                             </div>
                         </div>
                     </Carousel.Item>
@@ -230,12 +245,9 @@ const PopularItems = ({screenWidth}) => {
 
                         <div className="PopularItems__SingleItem__Static__Gradient">
                             <p className="PopularItems__SingleItem__Static__Gradient__Text">
-                                My dragons are
-                                misbehaving again.
-                                Unbelieveable!</p>
+                                My dragons are misbehaving again. Unbelieveable!</p>
                             <div className="PopularItems__SingleItem__Static__Gradient__Comment">
-                                <img className="PopularItems__SingleItem__Static__Gradient__Comment__Icon"
-                                     src="./PopularItems/comment.png" alt="comment"/>
+                                <i className="far fa-comment PopularItems__SingleItem__Static__Gradient__Comment__Icon"/>
                                 <p className="PopularItems__SingleItem__Static__Gradient__Comment__Text">5h ago</p>
                             </div>
                         </div>
@@ -250,7 +262,7 @@ const PopularItems = ({screenWidth}) => {
 
             {/* TABLET & DESKTOP */}
             {screenWidth > 767 ?
-                <section className="PopularItems__Carousel">
+                <section className="PopularItems__DesktopTablet">
                     {/* PRODUCT ONE */}
                     <div className="PopularItems__SingleItem">
                         <img className="PopularItems__Image"
@@ -258,22 +270,20 @@ const PopularItems = ({screenWidth}) => {
                              alt="First slide"/>
 
                         <div className="PopularItems__Info">
-                            <p className="PopularItems__Info__Name">Kristina Dam Oak Table With White<br/> Marble
-                                Top</p>
+                            <p className="PopularItems__Info__Name">Kristina Dam Oak Table With White<br/> Marble Top
+                            </p>
                             <p className="PopularItems__Info__Price">$ 799.55</p>
                         </div>
 
                         <div className="PopularItems__SingleItem__OnHover">
-                            <div className="PopularItems__SingleItem__OnHover__Background">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/cart.svg" alt="cart"/>
+                            <div className="PopularItems__SingleItem__OnHover__IconBackground">
+                                <i className="fas fa-plus PopularItems__SingleItem__OnHover__CartIcon"
+                                   onClick={handleAddToCart}/>
                             </div>
 
-                            <div className="PopularItems__SingleItem__OnHover__Background">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/favorite.svg" alt="favorite"/>
+                            <div className="PopularItems__SingleItem__OnHover__IconBackground">
+                                <i className="fas fa-heart PopularItems__SingleItem__OnHover__FavoriteIcon"
+                                   onClick={handleAddToWishlist}/>
                             </div>
                         </div>
                     </div>
@@ -293,9 +303,9 @@ const PopularItems = ({screenWidth}) => {
                                 <p className="PopularItems__Info__Extra__Price">$ 659.55</p>
                                 <button
                                     className={`${purchaseStatus ? `PopularItems__Info__Extra__BuyNow__Disabled` : `PopularItems__Info__Extra__BuyNow__Enabled`}`}
-                                    onClick={() => setPurchaseStatus(!purchaseStatus)}
-                                    disabled={purchaseStatus} // REDUX
-                                >buy now
+                                    onClick={handleClick}
+                                    disabled={purchaseStatus}>
+                                    buy now
                                 </button>
                             </div>
 
@@ -316,16 +326,14 @@ const PopularItems = ({screenWidth}) => {
                         </div>
 
                         <div className="PopularItems__SingleItem__OnHover">
-                            <div className="PopularItems__SingleItem__OnHover__Background">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/cart.svg" alt="cart"/>
+                            <div className="PopularItems__SingleItem__OnHover__IconBackground">
+                                <i className="fas fa-plus PopularItems__SingleItem__OnHover__CartIcon"
+                                   onClick={handleAddToCart}/>
                             </div>
 
-                            <div className="PopularItems__SingleItem__OnHover__Background">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/favorite.svg" alt="favorite"/>
+                            <div className="PopularItems__SingleItem__OnHover__IconBackground">
+                                <i className="fas fa-heart PopularItems__SingleItem__OnHover__FavoriteIcon"
+                                   onClick={handleAddToWishlist}/>
                             </div>
                         </div>
                     </div>
@@ -343,16 +351,14 @@ const PopularItems = ({screenWidth}) => {
                         </div>
 
                         <div className="PopularItems__SingleItem__OnHover">
-                            <div className="PopularItems__SingleItem__OnHover__Background">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/cart.svg" alt="cart"/>
+                            <div className="PopularItems__SingleItem__OnHover__IconBackground">
+                                <i className="fas fa-plus PopularItems__SingleItem__OnHover__CartIcon"
+                                   onClick={handleAddToCart}/>
                             </div>
 
-                            <div className="PopularItems__SingleItem__OnHover__Background">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/favorite.svg" alt="favorite"/>
+                            <div className="PopularItems__SingleItem__OnHover__IconBackground">
+                                <i className="fas fa-heart PopularItems__SingleItem__OnHover__FavoriteIcon"
+                                   onClick={handleAddToWishlist}/>
                             </div>
                         </div>
                     </div>
@@ -370,16 +376,14 @@ const PopularItems = ({screenWidth}) => {
                         </div>
 
                         <div className="PopularItems__SingleItem__OnHover">
-                            <div className="PopularItems__SingleItem__OnHover__Background">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/cart.svg" alt="cart"/>
+                            <div className="PopularItems__SingleItem__OnHover__IconBackground">
+                                <i className="fas fa-plus PopularItems__SingleItem__OnHover__CartIcon"
+                                   onClick={handleAddToCart}/>
                             </div>
 
-                            <div className="PopularItems__SingleItem__OnHover__Background">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/favorite.svg" alt="favorite"/>
+                            <div className="PopularItems__SingleItem__OnHover__IconBackground">
+                                <i className="fas fa-heart PopularItems__SingleItem__OnHover__FavoriteIcon"
+                                   onClick={handleAddToWishlist}/>
                             </div>
                         </div>
                     </div>
@@ -397,16 +401,14 @@ const PopularItems = ({screenWidth}) => {
                         </div>
 
                         <div className="PopularItems__SingleItem__OnHover">
-                            <div className="PopularItems__SingleItem__OnHover__Background">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/cart.svg" alt="cart"/>
+                            <div className="PopularItems__SingleItem__OnHover__IconBackground">
+                                <i className="fas fa-plus PopularItems__SingleItem__OnHover__CartIcon"
+                                   onClick={handleAddToCart}/>
                             </div>
 
-                            <div className="PopularItems__SingleItem__OnHover__Background">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/favorite.svg" alt="favorite"/>
+                            <div className="PopularItems__SingleItem__OnHover__IconBackground">
+                                <i className="fas fa-heart PopularItems__SingleItem__OnHover__FavoriteIcon"
+                                   onClick={handleAddToWishlist}/>
                             </div>
                         </div>
                     </div>
@@ -424,16 +426,14 @@ const PopularItems = ({screenWidth}) => {
                         </div>
 
                         <div className="PopularItems__SingleItem__OnHover">
-                            <div className="PopularItems__SingleItem__OnHover__Background">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/cart.svg" alt="cart"/>
+                            <div className="PopularItems__SingleItem__OnHover__IconBackground">
+                                <i className="fas fa-plus PopularItems__SingleItem__OnHover__CartIcon"
+                                   onClick={handleAddToCart}/>
                             </div>
 
-                            <div className="PopularItems__SingleItem__OnHover__Background">
-                                <img className="PopularItems__SingleItem__OnHover__Icon"
-                                     onClick={() => {}} // REDUX
-                                     src="./PopularItems/favorite.svg" alt="favorite"/>
+                            <div className="PopularItems__SingleItem__OnHover__IconBackground">
+                                <i className="fas fa-heart PopularItems__SingleItem__OnHover__FavoriteIcon"
+                                   onClick={handleAddToWishlist}/>
                             </div>
                         </div>
                     </div>
@@ -448,12 +448,10 @@ const PopularItems = ({screenWidth}) => {
 
                         <div className="PopularItems__SingleItem__Static__Gradient">
                             <p className="PopularItems__SingleItem__Static__Gradient__Text">
-                                My dragons are
-                                misbehaving again.
-                                Unbelieveable!</p>
+                                My dragons are misbehaving again. Unbelieveable!
+                            </p>
                             <div className="PopularItems__SingleItem__Static__Gradient__Comment">
-                                <img className="PopularItems__SingleItem__Static__Gradient__Comment__Icon"
-                                     src="./PopularItems/comment.png" alt="comment"/>
+                                <i className="far fa-comment PopularItems__SingleItem__Static__Gradient__Comment__Icon"/>
                                 <p className="PopularItems__SingleItem__Static__Gradient__Comment__Text">5h ago</p>
                             </div>
                         </div>
@@ -461,9 +459,46 @@ const PopularItems = ({screenWidth}) => {
                     </div>
                     {/* PRODUCT EIGHT - STATIC WITH GRADIENT */}
 
+                    {/* EXTRA LOADED PRODUCTS */}
+                    {PopularProducts.slice(0, loadedProducts).map(product => (
+                        <div className="PopularItems__SingleItem">
+                            <img className="PopularItems__Image"
+                                 src={product.productSrc}
+                                 alt={product.productAlt}/>
+
+                            <div className="PopularItems__Info">
+                                <p className="PopularItems__Info__Name">{product.productName}</p>
+                                <p className="PopularItems__Info__Price">{product.productPrice}</p>
+                            </div>
+
+                            <div className="PopularItems__SingleItem__OnHover">
+                                <div className="PopularItems__SingleItem__OnHover__IconBackground">
+                                    <i className="fas fa-plus PopularItems__SingleItem__OnHover__CartIcon"
+                                       onClick={handleAddToCart}/>
+                                </div>
+
+                                <div className="PopularItems__SingleItem__OnHover__IconBackground">
+                                    <i className="fas fa-heart PopularItems__SingleItem__OnHover__FavoriteIcon"
+                                       onClick={handleAddToWishlist}/>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                    {/* EXTRA LOADED PRODUCTS */}
+
                 </section>
                 : null}
             {/* TABLET & DESKTOP */}
+
+            {/* LOAD MORE BUTTON */}
+            {loadedProducts !== PopularProducts.length ?
+                <div className="PopularItems__DesktopTablet__LoadMoreButton"
+                     onClick={handleLoadClick}>
+                    <button className="">LOAD MORE</button>
+                    <i className="fas fa-redo-alt PopularItems__DesktopTablet__LoadMoreButton__Icon"></i>
+                </div>
+                : null}
+            {/* LOAD MORE BUTTON */}
 
         </section>
     );

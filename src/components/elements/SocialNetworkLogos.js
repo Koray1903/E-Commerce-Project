@@ -4,21 +4,24 @@ import "../../style/SocialNetworkLogos.scss";
 const SocialNetworkLogos = () => {
 
     return (
-        /* LOGOS - NOT HIDDEN IN DESKTOP VERSION BY DEFAULT */
         <section className="SocialNetworkLogos">
             <a target="_blank" href="https://www.facebook.com">
-                <img className="SocialNetworkLogos__Facebook" src="../facebook.svg" alt="Facebook"/></a>
+                <i className="fab fa-facebook-f SocialNetworkLogos__Facebook"/>
+
+            </a>
 
             <a target="_blank" href="https://www.google.com">
-                <img className="SocialNetworkLogos__Google" src="../google.svg" alt="Google"/></a>
+                <i className="fab fa-google SocialNetworkLogos__Google"/>
+            </a>
 
             <a target="_blank" href="https://www.twitter.com">
-                <img className="SocialNetworkLogos__Twitter" src="../twitter.svg" alt="Twitter"/></a>
+                <i className="fab fa-twitter SocialNetworkLogos__Twitter"/>
+            </a>
 
             <a target="_blank" href="https://www.pinterest.com">
-                <img className="SocialNetworkLogos__Pinterest" src="../pinterest.svg" alt="Pinterest"/></a>
+                <i className="fab fa-pinterest-p SocialNetworkLogos__Pinterest"/>
+            </a>
         </section>
-        /* LOGOS - NOT HIDDEN IN DESKTOP VERSION BY DEFAULT */
     );
 };
 

@@ -6,8 +6,8 @@
     font-weight: 400;
     position: absolute;
     text-transform: uppercase;
-    z-index: 999;
     top: 75px;
+    z-index: 999;
   }
 
   .Navigation__Option__Outer {
@@ -41,6 +41,9 @@
   .Navigation__Option__Inner__Categories {
     padding: 8px 16px 8px 48px;
   }
+  .Navigation__Option__Inner__Categories a, .Navigation__Option__Inner__Categories a:link, .Navigation__Option__Inner__Categories a:hover, .Navigation__Option__Inner__Categories a:visited, .Navigation__Option__Inner__Categories a:active {
+    text-decoration: none;
+  }
 
   .Navigation__Option__Inner__Categories__Link {
     color: white;
@@ -64,10 +67,10 @@
 }
 @media only screen and (min-width: 1024px) {
   .Navigation {
+    align-self: flex-end;
     background: white;
     display: flex;
     font-weight: 400;
-    height: 75px;
     text-transform: uppercase;
   }
 
@@ -76,9 +79,11 @@
     color: black;
     cursor: pointer;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 3px;
     opacity: 0.7;
-    padding: 16px;
+    padding: 16px 0;
+    width: 110px;
   }
 
   .Navigation__Option__Outer__Text {
@@ -92,7 +97,14 @@
     background: #262a33;
     border-bottom: 3px #84bc22 solid;
     color: white;
+    margin-bottom: 0;
     opacity: 1;
+  }
+  .Navigation__Option__Outer__OnHover:hover .Navigation__Option__Down {
+    color: white;
+  }
+  .Navigation__Option__Outer__OnHover:hover .Navigation__Option__Up {
+    color: white;
   }
 
   .Navigation__Option__Inner {
@@ -101,25 +113,25 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    left: 48px;
+    left: 24px;
     padding: 48px;
     position: absolute;
-    right: 48px;
-    top: 150px;
+    right: 24px;
+    top: 88px;
     z-index: 99;
   }
 
   .Navigation__Option__Inner__ProductCategories {
     display: flex;
     flex-direction: column;
-    height: 300px;
-    width: 45%;
+    height: 350px;
+    width: 50%;
   }
 
   .Navigation__Option__Inner__Sale {
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 350px;
     width: 10%;
   }
 
@@ -142,18 +154,26 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 265px;
-    justify-content: space-between;
+    height: 300px;
+    justify-content: flex-start;
+  }
+  .Navigation__Option__Inner__ProductCategories__Categories a, .Navigation__Option__Inner__ProductCategories__Categories a:link, .Navigation__Option__Inner__ProductCategories__Categories a:hover, .Navigation__Option__Inner__ProductCategories__Categories a:visited, .Navigation__Option__Inner__ProductCategories__Categories a:active {
+    text-decoration: none;
   }
 
   .Navigation__Option__Inner__ProductCategories__Categories__Category {
-    color: white;
     cursor: pointer;
+  }
+  .Navigation__Option__Inner__ProductCategories__Categories__Category p {
+    color: white;
     font-family: "Lato", sans-serif;
     font-size: 14px;
     font-weight: 600;
-    margin: 0;
     text-transform: capitalize;
+  }
+  .Navigation__Option__Inner__ProductCategories__Categories__Category p:hover {
+    color: #84bc22;
+    text-decoration: underline;
   }
 
   .Navigation__Option__Inner__Sale__Categories {
@@ -164,15 +184,23 @@
     height: 275px;
     justify-content: space-between;
   }
+  .Navigation__Option__Inner__Sale__Categories a, .Navigation__Option__Inner__Sale__Categories a:link, .Navigation__Option__Inner__Sale__Categories a:hover, .Navigation__Option__Inner__Sale__Categories a:visited, .Navigation__Option__Inner__Sale__Categories a:active {
+    text-decoration: none;
+  }
 
   .Navigation__Option__Inner__Sale__Categories__Category {
-    color: white;
     cursor: pointer;
+  }
+  .Navigation__Option__Inner__Sale__Categories__Category p {
+    color: white;
     font-family: "Lato", sans-serif;
     font-size: 14px;
     font-weight: 600;
-    margin: 0;
     text-transform: capitalize;
+  }
+  .Navigation__Option__Inner__Sale__Categories__Category p:hover {
+    color: #84bc22;
+    text-decoration: underline;
   }
 
   .Navigation__Image {
@@ -182,10 +210,12 @@
 
   .Navigation__Option__Down {
     color: black;
+    margin-left: 10px;
   }
 
   .Navigation__Option__Up {
     color: black;
+    margin-left: 10px;
   }
 
   .Element__Hide {

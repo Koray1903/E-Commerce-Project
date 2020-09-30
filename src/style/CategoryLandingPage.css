@@ -4,10 +4,9 @@
     background: #f2edea;
     display: flex;
     flex-direction: column;
-    height: 800px;
     justify-content: space-around;
-    width: 100%;
     padding-top: 100px;
+    width: 100%;
   }
 
   .breadcrumb {
@@ -16,7 +15,7 @@
     display: flex;
     height: min-content;
     justify-content: center;
-    margin: 0;
+    margin: 12px 0;
     padding: 0;
   }
 
@@ -30,6 +29,7 @@
     align-items: center;
     display: flex;
     justify-content: space-around;
+    margin: 12px 0;
     width: 90vw;
   }
 
@@ -54,11 +54,68 @@
     font-family: "Lato", sans-serif;
     font-size: 14px;
     font-weight: 600;
-    margin: 0;
+    margin: 12px 0;
   }
 
   .CategoryLandingPage__ResultsText {
     font-family: "Lato", sans-serif;
+    margin: 24px 0;
+  }
+
+  .CategoryLandingPage__PopularItems {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .CategoryLandingPage__PopularItems__SingleItem {
+    margin: 24px 0;
+  }
+
+  .PopularItems__DesktopTablet__LoadMoreButton {
+    background: transparent;
+    border: 2px white solid;
+    border-radius: 24px;
+    cursor: pointer;
+    padding: 8px 96px;
+  }
+  .PopularItems__DesktopTablet__LoadMoreButton button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: "Lato", sans-serif;
+  }
+  .PopularItems__DesktopTablet__LoadMoreButton button:focus {
+    outline: 0;
+  }
+
+  .CategoryLandinPage__PopularItems__LoadMoreButton {
+    background: #84bc22;
+    border: 2px white solid;
+    border-radius: 24px;
+    cursor: pointer;
+    margin: 48px 0;
+    padding: 8px 96px;
+  }
+  .CategoryLandinPage__PopularItems__LoadMoreButton button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: "Lato", sans-serif;
+  }
+  .CategoryLandinPage__PopularItems__LoadMoreButton button:focus {
+    outline: 0;
+  }
+
+  .CategoryLandinPage__PopularItems__LoadMoreButton:hover {
+    background: white;
+    border: 2px #84bc22 solid;
+  }
+  .CategoryLandinPage__PopularItems__LoadMoreButton:hover button {
+    color: #84bc22;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -67,9 +124,10 @@
     background: #f2edea;
     display: flex;
     flex-direction: column;
-    height: 450px;
     justify-content: space-around;
+    margin-top: 90px;
     width: 100%;
+    padding-top: 24px;
   }
 
   .breadcrumb {
@@ -78,8 +136,8 @@
     display: flex;
     height: min-content;
     justify-content: center;
-    margin: 0;
-    padding: 0;
+    padding: 24px;
+    margin: 12px 0;
   }
 
   .breadcrumb-item {
@@ -92,8 +150,8 @@
 
   .breadcrumb-item a, .breadcrumb-item a:link, .breadcrumb-item a:visited, .breadcrumb-item a:hover, .breadcrumb-item a:active {
     color: #84bc22;
-    text-decoration: none;
     display: inline;
+    text-decoration: none;
   }
 
   .CategoryLandingPage__Services {
@@ -102,6 +160,7 @@
     display: flex;
     justify-content: space-between;
     width: 90%;
+    margin: 24px 0;
   }
 
   .CategoryLandingPage__Services__HorizontalLine {
@@ -126,6 +185,64 @@
 
   .CategoryLandingPage__ResultsText {
     font-family: "Lato", sans-serif;
+    margin: 24px 0;
+  }
+
+  .CategoryLandingPage__PopularItems {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .CategoryLandingPage__PopularItems__SingleItem {
+    margin: 24px 0;
+    width: 275px;
+  }
+
+  .PopularItems__DesktopTablet__LoadMoreButton {
+    background: transparent;
+    border: 2px white solid;
+    border-radius: 24px;
+    cursor: pointer;
+    padding: 8px 96px;
+  }
+  .PopularItems__DesktopTablet__LoadMoreButton button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: "Lato", sans-serif;
+  }
+  .PopularItems__DesktopTablet__LoadMoreButton button:focus {
+    outline: 0;
+  }
+
+  .CategoryLandinPage__PopularItems__LoadMoreButton {
+    background: #84bc22;
+    border: 2px white solid;
+    border-radius: 24px;
+    cursor: pointer;
+    margin: 48px 0;
+    padding: 8px 96px;
+  }
+  .CategoryLandinPage__PopularItems__LoadMoreButton button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: "Lato", sans-serif;
+  }
+  .CategoryLandinPage__PopularItems__LoadMoreButton button:focus {
+    outline: 0;
+  }
+
+  .CategoryLandinPage__PopularItems__LoadMoreButton:hover {
+    background: white;
+    border: 2px #84bc22 solid;
+  }
+  .CategoryLandinPage__PopularItems__LoadMoreButton:hover button {
+    color: #84bc22;
   }
 }
 

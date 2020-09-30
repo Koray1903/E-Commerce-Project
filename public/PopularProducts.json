@@ -1,0 +1,87 @@
+[
+  {
+    "link":"#",
+    "productSrc":"./ProductsJSON/popular-item-1.png",
+    "productAlt":"product_image1",
+    "productName":"Kristina Dam Oak Table With White Marble Top",
+    "productPrice":"$ 799.55"
+  },
+  {
+    "link":"#",
+    "productSrc":"./ProductsJSON/popular-item-2.png",
+    "productAlt":"product_image2",
+    "productName":"Hay - About A Lounge \nChair AAL 93",
+    "productPrice":"$659.55"
+  },
+  {
+    "link":"#",
+    "productSrc":"./ProductsJSON/popular-item-3.png",
+    "productAlt":"product_image3",
+    "productName":"Activate Facial Mask and Charcoal Soap ",
+    "productPrice":"$ 129.55"
+  },
+  {
+    "link":"#",
+    "productSrc":"./ProductsJSON/popular-item-4.png",
+    "productAlt":"product_image4",
+    "productName":"Cocktail Table Walnut \n| YES",
+    "productPrice":"$ 299.99"
+  },
+  {
+    "link":"#",
+    "productSrc":"./ProductsJSON/popular-item-5.png",
+    "productAlt":"product_image5",
+    "productName":"Hay - About A Lounge \nChair AAL 93",
+    "productPrice":"$ 659.55"
+  },
+  {
+    "link":"#",
+    "productSrc":"./ProductsJSON/popular-item-6.png",
+    "productAlt":"product_image6",
+    "productName":"TORY DESK CALENDAR",
+    "productPrice":"$ 410.99"
+  },
+  {
+    "link":"#",
+    "productSrc":"./ProductsJSON/popular-item-7.png",
+    "productAlt":"product_image7",
+    "productName":"CH445 Wing Chair on \nSUITE NY",
+    "productPrice":"$ 330.55"
+  },
+  {
+    "link":"#",
+    "productSrc":"./ProductsJSON/popular-item-8.png",
+    "productAlt":"product_image8",
+    "productName":"My dragons are \nmisbehaving again.\nUnbelieveable!",
+    "productPrice":"$ 410.99",
+    "productMessage": "My dragons are \nmisbehaving again.\nUnbelieveable!"
+  },
+  {
+    "link":"#",
+    "productSrc":"./ProductsJSON/popular-item-9.png",
+    "productAlt":"product_image9",
+    "productName":"Kristina Dam Oak Table With White Marble Top",
+    "productPrice":"$ 799.55"
+  },
+  {
+    "link":"#",
+    "productSrc":"./ProductsJSON/popular-item-10.png",
+    "productAlt":"product_image10",
+    "productName":"Hay - About A Lounge \nChair AAL 93",
+    "productPrice":"$659.55"
+  },
+  {
+    "link":"#",
+    "productSrc":"./ProductsJSON/popular-item-11.png",
+    "productAlt":"productimage11",
+    "productName":"Activate Facial Mask and Charcoal Soap ",
+    "productPrice":"$ 129.55"
+  },
+  {
+    "link":"#",
+    "productSrc":"./ProductsJSON/popular-item-12.png",
+    "productAlt":"product_image12",
+    "productName":"Cocktail Table Walnut \n| YES",
+    "productPrice":"$ 299.99"
+  }
+]

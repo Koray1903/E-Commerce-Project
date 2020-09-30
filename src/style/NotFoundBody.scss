@@ -49,7 +49,7 @@ $default-font: "Lato", sans-serif;
   }
 
   .NotFoundPage__Services__HorizontalLine {
-    background: #ffffff;
+    background: #e5e1de;
     height: 3px;
     margin: 0;
     opacity: 0.5;
@@ -149,7 +149,9 @@ $default-font: "Lato", sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 110px;
     padding-bottom: 50px;
+    width: 1300px;
   }
 
   .NotFoundPageBody {
@@ -196,11 +198,11 @@ $default-font: "Lato", sans-serif;
   }
 
   .NotFoundPage__Services__HorizontalLine {
-    background: #ffffff;
+    background: #e5e1de;
     height: 3px;
     margin: 0;
     opacity: 0.5;
-    width: 30%;
+    width: 40%;
   }
 
   .NotFoundPage__Services__Text {

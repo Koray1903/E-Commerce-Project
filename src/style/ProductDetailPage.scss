@@ -20,20 +20,39 @@ $default-font: "Lato", sans-serif;
     width: 100%;
   }
 
-  .breadcrumbNav {
-    display: flex;
-    justify-content: center;
-    width: 90vw;
-  }
 
   .breadcrumb-item {
     display: inline;
     font-family: $default-font;
   }
 
-  .breadcrumb__home {
-    color: #84bc22;
+  .breadcrumb-item.active {
+    color: #6c757d;
+    display: inline;
+    font-family: $default-font;
+    font-size: 14px;
+    font-weight: 600;
   }
+
+  .breadcrumb-item {
+    display: inline;
+    font-family: $default-font;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .breadcrumb-item {
+    a, a:link, a:visited, a:active {
+      color: #6c757d;
+      display: inline;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #84bc22;
+    }
+  }
+
 
   .ProductDetailPage__Product {
     align-content: center;
@@ -60,9 +79,20 @@ $default-font: "Lato", sans-serif;
     margin: 0;
   }
 
+  .ProductDetailPage__Body {
+    align-items: center;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 90%;
+  }
+
   .ProductDetailPage__Body__Outer {
     align-items: center;
     background: white;
+
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -106,17 +136,20 @@ $default-font: "Lato", sans-serif;
     font-weight: 600;
     margin: 12px 0 12px 16px;
     padding: 8px 16px;
-    width: 200px;
+    width: 150px;
   }
 
   .ProductDetailPage__Body__Inner__ColorFilter:focus {
     outline: none;
   }
-  //.ProductDetailPage__ColorFilter__Color {
-  //  border-radius: 8px;
-  //  height: 16px;
-  //  width: 16px;
-  //}
+
+  .ProductDetailPage__Body__Inner__AmountAddToCart {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+  }
 
   .ProductDetailPage__Body__Inner__Amount {
     align-items: center;
@@ -132,7 +165,6 @@ $default-font: "Lato", sans-serif;
   }
 
   .ProductDetailPage__Body__Inner__Amount:focus {
-    //box-shadow: 0 0 0 3px -moz-mac-focusring;
     outline: none;
   }
 
@@ -147,7 +179,7 @@ $default-font: "Lato", sans-serif;
     outline: none;
   }
 
-  .ProductDetailPage__Body__Inner__AddToCart {
+  .ProductDetailPage__Body__Inner__AddToCartButton {
     align-self: flex-start;
     background: #84bc22;
     border: none;
@@ -160,8 +192,13 @@ $default-font: "Lato", sans-serif;
     text-transform: uppercase;
   }
 
-  .ProductDetailPage__Body__Inner__AddToCart:focus {
+  .ProductDetailPage__Body__Inner__AddToCartButton:focus {
     outline: none;
+  }
+
+  .ProductDetailPage__Body__Inner__AddToCartButton:hover {
+    background: white;
+    color: #84bc22;
   }
 
   .ProductDetailPage__Body__Inner__Description {
@@ -173,6 +210,7 @@ $default-font: "Lato", sans-serif;
   .ProductDetailPage__Body__Inner__ReadMore {
     align-self: flex-start;
     color: #84bc22;
+    cursor: pointer;
     font-family: $default-font;
     padding: 12px 0 12px 16px;
   }
@@ -192,9 +230,75 @@ $default-font: "Lato", sans-serif;
     margin: 0;
   }
 
-
-  .ProductDetailPageBackground {
+  .PopularItemsBackground {
     background: #f2edea;
+    color: #45413e;
+    text-transform: uppercase;
+  }
+
+  .fas.fa-minus {
+    cursor: pointer;
+  }
+
+  .fas.fa-plus {
+    cursor: pointer;
+  }
+
+  .ProductDetailPage__PopularItems__Carousel {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 90%;
+  }
+
+  .ProductDetailPage__PopularItems__Carousel__Title {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    width: 100%;
+  }
+
+  .ProductDetailPage__PopularItems__Carousel__Title__Text {
+    font-family: $default-font;
+    font-size: 22px;
+    font-weight: 800;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .ProductDetailPage__PopularItems__Carousel__Title__HorizontalLine {
+    background: #e8e4e1;
+    height: 3px;
+    margin: 0;
+    opacity: 0.5;
+    width: 50px;
+  }
+
+  .ProductDetailPage__PopularItems__Carousel__Slider {
+    width: 90%;
+  }
+
+  .slick-dots {
+    width: 100%;
+  }
+
+  .PopularItems__Info__Name {
+    color: #2c3e50;
+    font-family: $default-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  .PopularItems__Info__Price {
+    color: #011847;
+    font-family: $default-font;
+    font-size: 14px;
+    font-weight: 600;
   }
 }
 
@@ -210,8 +314,10 @@ $default-font: "Lato", sans-serif;
     background: #f2edea;
     display: flex;
     flex-direction: column;
+    margin-top: 90px;
     padding: 32px 0 0 0;
     text-align: center;
+    width: 1300px;
   }
 
   // BREADCRUMB
@@ -225,8 +331,8 @@ $default-font: "Lato", sans-serif;
     padding: 0;
   }
 
-  .breadcrumb-item {
-    color: #8dc73e;
+  .breadcrumb-item.active {
+    color: #6c757d;
     display: inline;
     font-family: $default-font;
     font-size: 14px;
@@ -234,10 +340,21 @@ $default-font: "Lato", sans-serif;
   }
 
   .breadcrumb-item {
-    a, a:link, a:visited, a:hover, a:active {
-      color: #84bc22;
+    display: inline;
+    font-family: $default-font;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .breadcrumb-item {
+    a, a:link, a:visited, a:active {
+      color: #6c757d;
       display: inline;
       text-decoration: none;
+    }
+
+    a:hover {
+      color: #84bc22;
     }
   }
   // BREADCRUMB
@@ -247,7 +364,7 @@ $default-font: "Lato", sans-serif;
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 24px;
+    padding: 24px 0;
     width: 90%;
   }
 
@@ -256,7 +373,7 @@ $default-font: "Lato", sans-serif;
     height: 3px;
     margin: 0;
     opacity: 0.5;
-    width: 25px;
+    width: 350px;
   }
 
   .ProductDetailPage__Product__Text {
@@ -267,24 +384,35 @@ $default-font: "Lato", sans-serif;
     margin: 0;
   }
 
+  .ProductDetailPage__Body {
+    align-items: center;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    min-height: 1000px;
+    padding-top: 48px;
+    width: 1150px;
+  }
+
   .ProductDetailPage__Body__Outer {
     align-items: flex-start;
-    background: white;
     border-radius: 16px;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-around;
-    margin-bottom: 24px;
-    padding-bottom: 24px;
-    width: 90%;
+    width: 100%;
   }
 
   .ProductDetailPage__Body__Inner {
     align-items: center;
+    background: transparent;
     display: flex;
     flex-direction: column;
+    height: 550px;
   }
-
 
   .ProductDetailPage__Body__Inner__Price {
     align-self: flex-start;
@@ -319,11 +447,16 @@ $default-font: "Lato", sans-serif;
   .ProductDetailPage__Body__Inner__ColorFilter:focus {
     outline: none;
   }
-  //.ProductDetailPage__ColorFilter__Color {
-  //  border-radius: 8px;
-  //  height: 16px;
-  //  width: 16px;
-  //}
+
+  .ProductDetailPage__Body__Inner__AmountAddToCart {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
 
   .ProductDetailPage__Body__Inner__Amount {
     align-items: center;
@@ -334,12 +467,11 @@ $default-font: "Lato", sans-serif;
     display: flex;
     justify-content: space-between;
     margin: 12px 0 12px 16px;
-    padding: 8px 16px;
+    padding: 8px 24px;
     width: 120px;
   }
 
   .ProductDetailPage__Body__Inner__Amount:focus {
-    //box-shadow: 0 0 0 3px -moz-mac-focusring;
     outline: none;
   }
 
@@ -354,10 +486,10 @@ $default-font: "Lato", sans-serif;
     outline: none;
   }
 
-  .ProductDetailPage__Body__Inner__AddToCart {
+  .ProductDetailPage__Body__Inner__AddToCartButton {
     align-self: flex-start;
     background: #84bc22;
-    border: none;
+    border: 2px solid #84bc22;
     border-radius: 24px;
     color: white;
     font-family: $default-font;
@@ -367,8 +499,13 @@ $default-font: "Lato", sans-serif;
     text-transform: uppercase;
   }
 
-  .ProductDetailPage__Body__Inner__AddToCart:focus {
+  .ProductDetailPage__Body__Inner__AddToCartButton:focus {
     outline: none;
+  }
+
+  .ProductDetailPage__Body__Inner__AddToCartButton:hover {
+    background: white;
+    color: #84bc22;
   }
 
   .ProductDetailPage__Body__Inner__Description {
@@ -406,7 +543,160 @@ $default-font: "Lato", sans-serif;
     margin: 0;
   }
 
-  .ProductDetailPageBackground {
+  .PopularItemsBackground {
     background: #f2edea;
+    color: #45413e;
+    text-transform: uppercase;
+
+    .PopularItems__Title {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding: 18px 0;
+      width: 100%;
+    }
+
+    .PopularItems__Title__HorizontalLine {
+      background: #e6e2df;
+      height: 2px;
+      margin: 0;
+      opacity: 0.5;
+      width: 35%;
+    }
   }
+
+  .fas.fa-minus {
+    cursor: pointer;
+  }
+
+  .fas.fa-plus {
+    cursor: pointer;
+  }
+
+  .ProductDetailPage__PopularItems {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 1100px;
+
+    .PopularItems__SingleItem {
+      width: 250px;
+    }
+
+    .PopularItems__Image {
+      border-radius: 16px 16px 0 0;
+      height: 22-50px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+
+    .PopularItems__Info {
+      align-items: center;
+      background: white;
+      border-radius: 0 0 16px 16px;
+      display: flex;
+      flex-direction: column;
+      height: 120px;
+      justify-content: center;
+      padding: 24px 0 24px 0;
+      width: 100%;
+    }
+
+    .PopularItems__Info__Name {
+      color: #2c3e50;
+      font-family: $default-font;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      text-align: center;
+    }
+
+    .PopularItems__Info__Price {
+      color: #011847;
+      font-family: $default-font;
+      font-size: 14px;
+      font-weight: 600;
+      opacity: 0.5;
+    }
+  }
+
+  .ProductDetailPage__PopularItems__Background {
+
+    .ProductDetailPage__PopularItems__Background__Title {
+      align-content: center;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      width: 100%;
+
+      .ProductDetailPage__PopularItems__Background__Title__Text {
+        color: #45413e;
+        font-family: $default-font;
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0;
+        text-transform: uppercase;
+      }
+
+      .ProductDetailPage__PopularItems__Background__Title__HorizontalLine {
+        background: #e8e4e1;
+        height: 3px;
+        margin: 0;
+        opacity: 0.5;
+        width: 350px;
+      }
+    }
+
+    .ProductDetailPage__PopularItems {
+
+      .PopularItems__SingleItem {
+        height: 370px;
+        margin: 24px 0;
+        width: 250px;
+      }
+
+      .PopularItems__Image {
+        border-radius: 16px 16px 0 0;
+        height: 250px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .PopularItems__Info {
+        align-items: center;
+        background: white;
+        border-radius: 0 0 16px 16px;
+        display: flex;
+        flex-direction: column;
+        height: 120px;
+        justify-content: center;
+        padding: 24px 0 24px 0;
+        width: 100%;
+
+        .PopularItems__Info__Name {
+          color: #2c3e50;
+          font-family: $default-font;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 18px;
+          text-align: center;
+        }
+
+        .PopularItems__Info__Price {
+          color: #011847;
+          font-family: $default-font;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+
 }

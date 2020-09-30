@@ -1,2 +1,4 @@
 export const ADD_TO_CART = "ADD_TO_CART";
 export const ADD_TO_WISHLIST = "ADD_TO_WISHLIST";
+export const FETCH_PRODUCTS = "FETCH_PRODUCTS";
+export const ENABLE_COOKIES = "ENABLE_COOKIES";

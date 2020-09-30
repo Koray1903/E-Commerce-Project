@@ -1,5 +1,4 @@
 $default-font: "Lato", sans-serif;
-// PADDING - 24PX
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 
@@ -8,10 +7,10 @@ $default-font: "Lato", sans-serif;
     background: #f2edea;
     display: flex;
     flex-direction: column;
-    height: 800px;
+    //height: 2800px;
     justify-content: space-around;
-    width: 100%;
     padding-top: 100px;
+    width: 100%;
   }
 
   // BREADCRUMB
@@ -21,7 +20,7 @@ $default-font: "Lato", sans-serif;
     display: flex;
     height: min-content;
     justify-content: center;
-    margin: 0;
+    margin: 12px 0;
     padding: 0;
   }
 
@@ -38,6 +37,7 @@ $default-font: "Lato", sans-serif;
     align-items: center;
     display: flex;
     justify-content: space-around;
+    margin: 12px 0;
     width: 90vw;
   }
 
@@ -62,11 +62,77 @@ $default-font: "Lato", sans-serif;
     font-family: $default-font;
     font-size: 14px;
     font-weight: 600;
-    margin: 0;
+    margin: 12px 0;
   }
 
   .CategoryLandingPage__ResultsText {
     font-family: $default-font;
+    margin: 24px 0;
+  }
+
+  .CategoryLandingPage__PopularItems {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .CategoryLandingPage__PopularItems__SingleItem {
+    margin: 24px 0;
+  }
+
+  .CategoryLandingPage__PopularItems {
+
+  }
+
+  .PopularItems__DesktopTablet__LoadMoreButton {
+    background: transparent;
+    border: 2px white solid;
+    border-radius: 24px;
+    cursor: pointer;
+    padding: 8px 96px;
+
+    button {
+      background: transparent;
+      border: none;
+      color: white;
+      font-family: $default-font;
+    }
+
+    button:focus {
+      outline: 0;
+    }
+  }
+
+  .CategoryLandinPage__PopularItems__LoadMoreButton {
+    background: #84bc22;
+    border: 2px white solid;
+    border-radius: 24px;
+    cursor: pointer;
+    margin: 48px 0;
+    padding: 8px 96px;
+
+    button {
+      background: transparent;
+      border: none;
+      color: white;
+      font-family: $default-font;
+    }
+
+    button:focus {
+      outline: 0;
+    }
+  }
+
+  .CategoryLandinPage__PopularItems__LoadMoreButton:hover {
+    background: white;
+    border: 2px #84bc22 solid;
+
+    button {
+      color: #84bc22;
+    }
   }
 }
 
@@ -82,9 +148,10 @@ $default-font: "Lato", sans-serif;
     background: #f2edea;
     display: flex;
     flex-direction: column;
-    height: 450px;
     justify-content: space-around;
+    margin-top: 90px;
     width: 100%;
+    padding-top:24px;
   }
 
   // BREADCRUMB
@@ -94,8 +161,8 @@ $default-font: "Lato", sans-serif;
     display: flex;
     height: min-content;
     justify-content: center;
-    margin: 0;
-    padding: 0;
+    padding: 24px;
+    margin: 12px 0;
   }
 
   .breadcrumb-item {
@@ -109,8 +176,8 @@ $default-font: "Lato", sans-serif;
   .breadcrumb-item {
     a, a:link, a:visited, a:hover, a:active {
       color: #84bc22;
-      text-decoration: none;
       display: inline;
+      text-decoration: none;
     }
   }
   // BREADCRUMB
@@ -121,6 +188,7 @@ $default-font: "Lato", sans-serif;
     display: flex;
     justify-content: space-between;
     width: 90%;
+    margin: 24px 0;
   }
 
   .CategoryLandingPage__Services__HorizontalLine {
@@ -145,5 +213,72 @@ $default-font: "Lato", sans-serif;
 
   .CategoryLandingPage__ResultsText {
     font-family: $default-font;
+    margin: 24px 0;
+  }
+
+  .CategoryLandingPage__PopularItems {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .CategoryLandingPage__PopularItems__SingleItem {
+    margin: 24px 0;
+    width: 275px;
+  }
+
+  .CategoryLandingPage__PopularItems {
+
+  }
+
+  .PopularItems__DesktopTablet__LoadMoreButton {
+    background: transparent;
+    border: 2px white solid;
+    border-radius: 24px;
+    cursor: pointer;
+    padding: 8px 96px;
+
+    button {
+      background: transparent;
+      border: none;
+      color: white;
+      font-family: $default-font;
+    }
+
+    button:focus {
+      outline: 0;
+    }
+  }
+
+  .CategoryLandinPage__PopularItems__LoadMoreButton {
+    background: #84bc22;
+    border: 2px white solid;
+    border-radius: 24px;
+    cursor: pointer;
+    margin: 48px 0;
+    padding: 8px 96px;
+
+    button {
+      background: transparent;
+      border: none;
+      color: white;
+      font-family: $default-font;
+    }
+
+    button:focus {
+      outline: 0;
+    }
+  }
+
+  .CategoryLandinPage__PopularItems__LoadMoreButton:hover {
+    background: white;
+    border: 2px #84bc22 solid;
+
+    button {
+      color: #84bc22;
+    }
   }
 }

@@ -4,6 +4,7 @@
     background: transparent;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
     padding: 24px;
   }
@@ -17,23 +18,23 @@
   }
 
   .PopularItems__Title__HorizontalLine {
-    background: #6894a8;
+    background: #e8e4e1;
     height: 2px;
     margin: 0;
     opacity: 0.5;
-    width: 60px;
+    width: 65px;
   }
 
   .PopularItems__Title__Text {
-    color: black;
+    color: inherit;
     font-family: "Lato", sans-serif;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 800;
     margin: 0;
-    text-transform: uppercase;
+    text-transform: inherit;
   }
 
-  .PopularItems__Carousel {
+  .PopularItems__Mobile__Carousel {
     height: 420px;
     width: 325px;
   }
@@ -66,8 +67,15 @@
     justify-content: center;
     width: 80px;
   }
-  .PopularItems__SingleItem:hover .PopularItems__SingleItem__OnHover__Icon {
+  .PopularItems__SingleItem:hover .PopularItems__SingleItem__OnHover__CartIcon {
+    color: #2ed3a2;
     cursor: pointer;
+    font-size: 32px;
+  }
+  .PopularItems__SingleItem:hover .PopularItems__SingleItem__OnHover__FavoriteIcon {
+    color: deeppink;
+    cursor: pointer;
+    font-size: 32px;
   }
 
   .PopularItems__Image {
@@ -165,7 +173,6 @@
 
   .PopularItems__SingleItem__Static__Gradient {
     align-items: flex-start;
-    background-color: #ffffff;
     background-image: linear-gradient(to top, #675b99 0%, #dc5987 100%);
     border-radius: 16px;
     display: flex;
@@ -186,8 +193,15 @@
   }
 
   .PopularItems__SingleItem__Static__Gradient__Comment {
-    align-items: flex-end;
+    align-items: center;
     display: flex;
+    justify-content: space-between;
+    width: 90px;
+  }
+
+  .PopularItems__SingleItem__Static__Gradient__Comment__Icon {
+    color: #84bc22;
+    font-size: 20px;
   }
 
   .PopularItems__SingleItem__Static__Gradient__Comment__Text {
@@ -196,55 +210,63 @@
     margin: 0;
     text-transform: uppercase;
   }
+
+  .PopularItems__DesktopTablet__LoadMoreButton {
+    display: none;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .PopularItems {
-    align-items: flex-start;
-    background: #262a33;
+    align-items: center;
+    background: transparent;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: max-content;
+    justify-content: center;
     padding: 48px 24px;
+    width: 1300px;
   }
 
   .PopularItems__Title {
     align-items: center;
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     padding-bottom: 48px;
     width: 100%;
   }
 
   .PopularItems__Title__HorizontalLine {
-    background: #6894a8;
+    background: #e8e4e1;
     height: 2px;
     margin: 0;
     opacity: 0.5;
-    width: 500px;
+    width: 35%;
   }
 
   .PopularItems__Title__Text {
-    color: white;
+    color: inherit;
     font-family: "Lato", sans-serif;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 32px;
+    font-weight: 800;
     margin: 0;
   }
 
-  .PopularItems__Carousel {
+  .PopularItems__DesktopTablet {
+    align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 800px;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    max-width: 1200px;
   }
 
   .PopularItems__SingleItem {
+    height: 370px;
+    margin: 24px 0;
     width: 275px;
-    height: 390px;
   }
 
   .PopularItems__SingleItem__OnHover {
@@ -253,17 +275,18 @@
 
   .PopularItems__SingleItem:hover .PopularItems__SingleItem__OnHover {
     align-items: center;
-    background-color: #816fca;
     background-image: linear-gradient(to top, #1cc167 0%, #2ed3a2 100%);
     border-radius: 16px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     height: 370px;
     justify-content: space-around;
     margin-top: -370px;
     opacity: 0.9;
     padding: 24px;
     width: 275px;
-    z-index: 10;
+    z-index: 2;
   }
   .PopularItems__SingleItem:hover .PopularItems__SingleItem__OnHover__IconBackground {
     align-items: center;
@@ -273,10 +296,16 @@
     height: 80px;
     justify-content: center;
     width: 80px;
-    border: 1px red solid;
   }
-  .PopularItems__SingleItem:hover .PopularItems__SingleItem__OnHover__Icon {
+  .PopularItems__SingleItem:hover .PopularItems__SingleItem__OnHover__CartIcon {
+    color: #2ed3a2;
     cursor: pointer;
+    font-size: 32px;
+  }
+  .PopularItems__SingleItem:hover .PopularItems__SingleItem__OnHover__FavoriteIcon {
+    color: deeppink;
+    cursor: pointer;
+    font-size: 32px;
   }
 
   .PopularItems__Image {
@@ -395,8 +424,15 @@
   }
 
   .PopularItems__SingleItem__Static__Gradient__Comment {
-    align-items: flex-end;
+    align-items: center;
     display: flex;
+    justify-content: space-between;
+    width: 90px;
+  }
+
+  .PopularItems__SingleItem__Static__Gradient__Comment__Icon {
+    color: #84bc22;
+    font-size: 20px;
   }
 
   .PopularItems__SingleItem__Static__Gradient__Comment__Text {
@@ -404,6 +440,23 @@
     font-family: "Lato", sans-serif;
     margin: 0;
     text-transform: uppercase;
+  }
+
+  .PopularItems__DesktopTablet__LoadMoreButton {
+    background: transparent;
+    border: 2px white solid;
+    border-radius: 24px;
+    cursor: pointer;
+    padding: 8px 96px;
+  }
+  .PopularItems__DesktopTablet__LoadMoreButton button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: "Lato", sans-serif;
+  }
+  .PopularItems__DesktopTablet__LoadMoreButton button:focus {
+    outline: 0;
   }
 }
 

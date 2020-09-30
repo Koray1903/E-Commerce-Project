@@ -1,8 +1,9 @@
 $default-font: "Lato", sans-serif;
-// PADDING - 24PX
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-  // NOT AVAILABLE
+  .SummerSales {
+    display: none
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -76,19 +77,26 @@ $default-font: "Lato", sans-serif;
     padding: 4px 12px;
     text-transform: uppercase;
     width: 150px;
+
+    a, a:hover, a:visited, a:link, a:active {
+      align-items: center;
+      color: inherit;
+      display: flex;
+      justify-content: space-around;
+      text-decoration: none;
+    }
+  }
+
+  .SummerSales__Facebook__FollowButton:hover {
+    background: #3a5b96;
+    color: white;
+
+    .SummerSales__Facebook__FollowButton__Icon {
+      color: white;
+    }
   }
 
   .SummerSales__Facebook__FollowButton__Icon {
     height: 16px;
-  }
-
-  a, a:hover, a:visited, a:link, a:active {
-    align-items: center;
-    color: #3a5b96;
-    display: flex;
-    justify-content: space-around;
-
-    text-decoration: none;
-
   }
 }

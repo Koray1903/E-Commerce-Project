@@ -12,6 +12,9 @@ const Header = ({screenWidth}) => {
         setShowNavigation(!showNavigation);
     }, [showNavigation]);
 
+    const currencyArray = ["EN", "UA", "RU"];
+    const languageArray = ["USD", "UAH", "EUR"];
+
     return (
         <section className="Header">
             {screenWidth < 768 ?
@@ -38,8 +41,10 @@ const Header = ({screenWidth}) => {
                         <img className="Header__TabletDesktop__Icon" src="../header/Logo.png" alt="logo"/>
                     </Link>
                     <div className="Header__TabletDesktop__Text">
-                        <p className="Header__TabletDesktop__Text__1">osf</p>
-                        <p className="Header__TabletDesktop__Text__2">academy</p>
+                        <Link to="/">
+                            <p className="Header__TabletDesktop__Text__1">osf</p>
+                            <p className="Header__TabletDesktop__Text__2">academy</p>
+                        </Link>
                     </div>
                 </div>
                 // TABLET & DESKTOP VERSION
@@ -55,8 +60,21 @@ const Header = ({screenWidth}) => {
             {/* TABLET & DESKTOP VERSION NAVIGATION MENU */}
 
 
-            {/* LANGUAGE & CURRENCY LATER */}
-            {/* {screenWidth > 767 ? <LanguageCurrency/> : null} */}
+            {/* LANGUAGE & CURRENCY  */}
+            <div className="Header__LanguageCurrency">
+                <select className="Header__LanguageCurrency__Inner__Filter">
+                    {languageArray.map((element, index) => (
+                        <option value={element} key={index}>{element}</option>
+                    ))}
+                </select>
+
+                <select className="Header__LanguageCurrency__Inner__Filter">
+                    {currencyArray.map((element, index) => (
+                        <option value={element} key={index}>{element}</option>
+                    ))}
+                </select>
+            </div>
+            {/* LANGUAGE & CURRENCY  */}
 
 
             {/* TABLET & DESKTOP VERSION FIXED */}

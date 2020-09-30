@@ -1,0 +1,65 @@
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .ProductDetailPageTabs {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .ProductDetailPageTabs {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-item.nav-link.active {
+    background: #262a33;
+    border: none;
+    border-radius: 16px 16px 0 0;
+    color: #ffffff;
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    padding: 16px 36px;
+  }
+
+  .nav-item.nav-link {
+    background: transparent;
+    border-radius: 16px 16px 0 0;
+    color: #bcc4c7;
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    padding: 16px 36px;
+  }
+
+  .fade.tab-pane.active {
+    background: #262a33;
+    border: none;
+    border-radius: 0 0 16px 16px;
+    color: #ffffff;
+  }
+
+  .Tab__Outer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 48px;
+    text-align: left;
+  }
+
+  .Tab__Inner {
+    height: 250px;
+    width: 45%;
+  }
+
+  .Tab__Text {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+}
+
+/*# sourceMappingURL=ProductDetailPageTabs.css.map */

@@ -8,7 +8,7 @@
     padding: 12px;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 1000;
   }
 
@@ -30,23 +30,36 @@
     justify-self: center;
     margin: 0 auto;
   }
+
+  .Header__LanguageCurrency {
+    display: none;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .Header {
     align-items: center;
+    background: white;
+    border-bottom: 2px solid #e8e2d6;
     display: flex;
     justify-content: space-between;
-    padding: 12px 24px;
-    width: 100%;
+    padding: 0 64px;
+    position: fixed;
+    top: 0;
+    width: 1300px;
+    z-index: 1000;
   }
 
   .Header__TabletDesktop {
     align-items: center;
     display: flex;
     height: max-content;
-    justify-content: flex-start;
+    justify-content: center;
     justify-self: flex-start;
-    width: 150px;
+    padding: 12px 0;
+    width: 175px;
+  }
+  .Header__TabletDesktop a, .Header__TabletDesktop a:link, .Header__TabletDesktop a:visited, .Header__TabletDesktop a:hover a:active {
+    text-decoration: none;
   }
 
   .Header__TabletDesktop__Icon {
@@ -82,6 +95,45 @@
     line-height: 18px;
     margin: 0;
     text-transform: capitalize;
+  }
+
+  .Header__LanguageCurrency {
+    align-items: center;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .Header__LanguageCurrency__Inner__Filter {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: url("../images/caret-down-solid.svg");
+    background-position: right 24px top 50%, 0 0;
+    background-repeat: no-repeat, repeat;
+    background-size: 10px auto, 100%;
+    border: none;
+    border-radius: 24px;
+    color: #45413e;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    opacity: 0.7;
+    padding: 8px 8px;
+    width: 90px;
+  }
+
+  .Header__LanguageCurrency__Inner__Filter::-ms-expand {
+    display: none;
+  }
+
+  .Header__LanguageCurrency__Inner__Filter:focus {
+    outline: none;
   }
 }
 

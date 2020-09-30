@@ -21,7 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-!/src/PopularProducts.json
+!/public/PopularProducts.json
 !/src/images/PRODUCT_IMAGES/
 !/src/images/RESIMLER/
 !/src/images/111.png

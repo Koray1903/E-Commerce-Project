@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Header from "./elements/Header";
 import Slider from "./elements/Slider";
 import SummerSales from "./elements/SummerSales";
@@ -10,34 +10,47 @@ import Fixed from "./elements/Fixed";
 import CookieModal from "./elements/CookieModal";
 import FeaturedProducts from "./elements/FeaturedProducts";
 import "../style/HomePage.scss";
+import {useSelector, useDispatch} from "react-redux";
+import {fetchProducts} from "../redux/actions.js";
 
 const HomePage = ({screenWidth}) => {
 
+    const dispatch = useDispatch();
+    const areCookiesEnabled = useSelector(state => state.shopReducer.areCookiesEnabled);
+
+    useEffect(() => {
+        dispatch(fetchProducts());
+    }, []);
+
+    // SCROLL TO TOP ON MOUNT
+    useEffect(() => window.scrollTo(0, 0), []);
+    // SCROLL TO TOP ON MOUNT
+
     return (
-        <section>
+        <section className="HomePage">
             <Header screenWidth={screenWidth}/>
 
-            <div className="SliderSummerSalesBackground"> {/* ADD CSS LATER */}
+            <div className="SliderSummerSalesBackground">
                 <Slider/>
 
                 {/* COOKIE MODAL - APPEARS AFTER 10 SECONDS */}
-                {/*<CookieModal/>*/}
+                {!areCookiesEnabled ? <CookieModal/> : null}
                 {/* COOKIE MODAL - APPEARS AFTER 10 SECONDS */}
 
-                {/* NOT AVAILABLE IN MOBILE VERSION */}
-                {screenWidth > 767 ? <SummerSales/> : null}
-                {/* NOT AVAILABLE IN MOBILE VERSION */}
+                {/* ONLY IN TABLET & DESKTOP VERSIONS */}
+                <SummerSales/>
+                {/* ONLY IN TABLET & DESKTOP VERSIONS */}
             </div>
 
-            <div className="PopularItemsBackground">
+            <div className="HomePagePopularItemsBackground">
                 <PopularItems screenWidth={screenWidth}/>
             </div>
 
             <FullWidthImage/>
 
-            {/* NOT AVAILABLE IN MOBILE VERSION */}
-            {screenWidth > 767 ? <FeaturedProducts/> : null}
-            {/* NOT AVAILABLE IN MOBILE VERSION */}
+            {/* ONLY IN TABLET & DESKTOP VERSIONS */}
+            <FeaturedProducts/>
+            {/* ONLY IN TABLET & DESKTOP VERSIONS */}
 
             <Benefits/>
 

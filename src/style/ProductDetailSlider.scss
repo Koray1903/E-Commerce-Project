@@ -1,5 +1,4 @@
 $default-font: "Lato", sans-serif;
-// PADDING - 24PX
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .ProductDetailSlider {
@@ -13,10 +12,23 @@ $default-font: "Lato", sans-serif;
     width: 90vw;
   }
 
+  .ProductDetailSlider__Inner {
+    position: relative;
+    width: 100%;
+  }
+
   .ProductDetailSlider__Image {
-    border-radius: 16px 16px 0 0;
     height: auto;
-    width: 90vw;
+    width: 100%;
+  }
+
+  .ProductDetailSlider__Image__ExpandIcon {
+    color: #84bc22;
+    cursor: pointer;
+    font-size: 24px;
+    left: 15px;
+    position: absolute;
+    top: 15px;
   }
 
   .ProductDetailSlider__Slider {
@@ -43,39 +55,46 @@ $default-font: "Lato", sans-serif;
 @media only screen and (min-width: 1024px) {
   .ProductDetailSlider {
     align-items: center;
-    align-self: flex-start;
     background: white;
     border-radius: 16px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 24px;
-    width: 700px;
+    width: 600px;
   }
 
-  .ProductDetailSlider__Image {
-    align-self: flex-start;
-    border-radius: 16px 16px 0 0;
-    height: auto;
+  .ProductDetailSlider__Inner {
+    height: 450px;
+    position: relative;
     width: 450px;
   }
 
-  .ProductDetailSlider__Slider {
-    height: max-content;
-    padding: 24px;
-    width: 150px;
+  .ProductDetailSlider__Image {
+    border-radius: 16px 16px 0 0;
+    height: 450px;
+    width: 450px;
   }
 
-  .flexColumnClass {
-    height: max-content;
-    width: max-content;
+  .ProductDetailSlider__Image__ExpandIcon {
+    color: #84bc22;
+    cursor: pointer;
+    font-size: 36px;
+    left: 15px;
+    position: absolute;
+    top: 15px;
+  }
+
+  .ProductDetailSlider__Slider {
+    height: 450px;
+    width: 100px;
   }
 
   .ProductDetailSlider__Thumbnail {
     border-radius: 8px;
+    cursor: pointer;
   }
 
   .slick-dots {
-    width: max-content;
+    display: none;
   }
 }

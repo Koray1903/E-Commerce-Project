@@ -77,14 +77,13 @@ const LoginModal = ({show, handleClose}) => {
                                type={passwordVisibility}/>
 
                         {/* PASSWORD VISIBILITY TOGGLE */}
-                        <img src="./LoginModal/password-show.svg"
-                             className={`ModalBody__Password__Input__Icon ${passwordVisible ? "Element__Display" : "Element__Hide"}`}
-                             onClick={hidePassword}
-                             alt="password-show"/>
-                        <img src="./LoginModal/password-hide.svg"
-                             className={`ModalBody__Password__Input__Icon ${passwordHidden ? "Element__Display" : "Element__Hide"}`}
-                             onClick={showPassword}
-                             alt="password-hide"/>
+                        {passwordVisible ?
+                            <i className="fas fa-eye ModalBody__Password__Input__Icon"
+                               onClick={hidePassword}/> : null}
+
+                        {passwordHidden ?
+                            <i className="fas fa-eye-slash ModalBody__Password__Input__Icon"
+                               onClick={showPassword}/> : null}
                         {/* PASSWORD VISIBILITY TOGGLE */}
                     </div>
 

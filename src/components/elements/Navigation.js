@@ -31,15 +31,17 @@ const Navigation = ({screenWidth}) => {
 
 
     return (
-        // ON HOVER GREEN COLOR WITH UNDERLINE (FOR DESKTOP VERSION)
         <section className="Navigation">
 
             {/* OUTER NAVIGATION */}
             <div className="Navigation__Option__Outer Navigation__Option__Outer__OnHover" onClick={handleServicesClick}>
                 <p className="Navigation__Option__Outer__Text">services</p>
 
-                <i className={`fas fa-caret-down Navigation__Option__Down ${!showServices ? "Element__Display" : "Element__Hide"}`}/>
-                <i className={`fas fa-caret-up Navigation__Option__Up ${showServices ? "Element__Display" : "Element__Hide"}`}/>
+                {!showServices ?
+                    <i className="fas fa-caret-down Navigation__Option__Down"/>
+                    :
+                    <i className="fas fa-caret-up Navigation__Option__Up"/>
+                }
             </div>
             {/* OUTER NAVIGATION */}
 
@@ -95,8 +97,8 @@ const Navigation = ({screenWidth}) => {
                                 <div
                                     className={`Navigation__Option__Inner__ProductCategories__Categories ${showServices ? "Element__Display" : "Element__Hide"}`}>
                                     {productCategories.map(element =>
-                                        <Link to="/404">
-                                            <p className="Navigation__Option__Inner__ProductCategories__Categories__Category">{element}</p>
+                                        <Link className="Navigation__Option__Inner__ProductCategories__Categories__Category" to="/404">
+                                            <p>{element}</p>
                                         </Link>)}
                                 </div>
                             </div>
@@ -108,8 +110,8 @@ const Navigation = ({screenWidth}) => {
                                 <div
                                     className={`Navigation__Option__Inner__Sale__Categories ${showServices ? "Element__Display" : "Element__Hide"}`}>
                                     {sale.map(element =>
-                                        <Link to="/404">
-                                            <p className="Navigation__Option__Inner__Sale__Categories__Category">{element}</p>
+                                        <Link className="Navigation__Option__Inner__Sale__Categories__Category" to="/404">
+                                            <p>{element}</p>
                                         </Link>)}
                                 </div>
                             </div>
@@ -124,15 +126,15 @@ const Navigation = ({screenWidth}) => {
 
 
             {/* OUTER NAVIGATION */}
-            <div className="Navigation__Option__Outer">
+            <div className="Navigation__Option__Outer Navigation__Option__Outer__OnHover">
                 <p className="Navigation__Option__Outer__Text">company</p>
             </div>
 
-            <div className="Navigation__Option__Outer">
+            <div className="Navigation__Option__Outer Navigation__Option__Outer__OnHover">
                 <p className="Navigation__Option__Outer__Text">library</p>
             </div>
 
-            <div className="Navigation__Option__Outer">
+            <div className="Navigation__Option__Outer Navigation__Option__Outer__OnHover">
                 <p className="Navigation__Option__Outer__Text">contact us</p>
             </div>
             {/* OUTER NAVIGATION */}
