@@ -1,9 +1,10 @@
 import React, {useCallback, useState} from "react";
-import Carousel from "react-bootstrap/Carousel";
 import {Link} from "react-router-dom";
 import {addToCart, addToWishlist} from "../../redux/actions.js";
 import {useDispatch, useSelector} from "react-redux";
-import "bootstrap/dist/css/bootstrap.min.css";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 import "../../style/PopularItems.scss";
 
 const PopularItems = ({screenWidth}) => {
@@ -26,14 +27,6 @@ const PopularItems = ({screenWidth}) => {
         setPurchaseStatus(!purchaseStatus);
     }, []);
 
-    // CAROUSEL - ONLY IN MOBILE VERSION
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    };
-    // CAROUSEL - ONLY IN MOBILE VERSION
-
     // FOR PRODUCT TWO
     const [purchaseStatus, setPurchaseStatus] = useState(false);
     // FOR PRODUCT TWO
@@ -46,7 +39,6 @@ const PopularItems = ({screenWidth}) => {
     }, [loadedProducts]);
     // EXTRA LOADED PRODUCTS
 
-
     return (
         <section className="PopularItems">
 
@@ -58,10 +50,15 @@ const PopularItems = ({screenWidth}) => {
 
             {/* MOBILE */}
             {screenWidth < 768 ?
-                <Carousel activeIndex={index} onSelect={handleSelect} className="PopularItems__Mobile__Carousel">
+                <OwlCarousel
+                    className="owl-theme PopularItems__Mobile__Carousel"
+                    loop
+                    margin={25}
+                    items="1"
+                    nav={false}>
 
                     {/* PRODUCT ONE */}
-                    <Carousel.Item className="PopularItems__SingleItem">
+                    <div className="PopularItems__SingleItem">
                         <img className="PopularItems__Image"
                              src="./PopularItems/popular-item-1.png"
                              alt="First slide"/>
@@ -83,11 +80,11 @@ const PopularItems = ({screenWidth}) => {
                                    onClick={handleAddToWishlist}/>
                             </div>
                         </div>
-                    </Carousel.Item>
+                    </div>
                     {/* PRODUCT ONE */}
 
                     {/* PRODUCT TWO - BUY NOW BUTTON */}
-                    <Carousel.Item className="PopularItems__SingleItem">
+                    <div className="PopularItems__SingleItem">
                         <Link to="/pdp">
                             <img className="PopularItems__Image"
                                  src="./PopularItems/popular-item-2.png"
@@ -101,18 +98,18 @@ const PopularItems = ({screenWidth}) => {
                                 <button
                                     className={`${purchaseStatus ? `PopularItems__Info__Extra__BuyNow__Disabled` : `PopularItems__Info__Extra__BuyNow__Enabled`}`}
                                     onClick={handleClick}
-                                    disabled={purchaseStatus}
-                                >buy now
+                                    disabled={purchaseStatus}>
+                                    buy now
                                 </button>
                             </div>
 
                         </div>
 
-                    </Carousel.Item>
+                    </div>
                     {/* PRODUCT TWO - BUY NOW BUTTON */}
 
                     {/* PRODUCT THREE */}
-                    <Carousel.Item className="PopularItems__SingleItem">
+                    <div className="PopularItems__SingleItem">
                         <img className="PopularItems__Image"
                              src="./PopularItems/popular-item-3.png"
                              alt="Third slide"/>
@@ -133,11 +130,11 @@ const PopularItems = ({screenWidth}) => {
                                    onClick={handleAddToWishlist}/>
                             </div>
                         </div>
-                    </Carousel.Item>
+                    </div>
                     {/* PRODUCT THREE */}
 
                     {/* PRODUCT FOUR */}
-                    <Carousel.Item className="PopularItems__SingleItem">
+                    <div className="PopularItems__SingleItem">
                         <img className="PopularItems__Image"
                              src="./PopularItems/popular-item-4.png"
                              alt="Fourth slide"/>
@@ -158,11 +155,11 @@ const PopularItems = ({screenWidth}) => {
                                    onClick={handleAddToWishlist}/>
                             </div>
                         </div>
-                    </Carousel.Item>
+                    </div>
                     {/* PRODUCT FOUR */}
 
                     {/* PRODUCT FIVE */}
-                    <Carousel.Item className="PopularItems__SingleItem">
+                    <div className="PopularItems__SingleItem">
                         <img className="PopularItems__Image"
                              src="./PopularItems/popular-item-5.png"
                              alt="Fifth slide"/>
@@ -183,11 +180,11 @@ const PopularItems = ({screenWidth}) => {
                                    onClick={handleAddToWishlist}/>
                             </div>
                         </div>
-                    </Carousel.Item>
+                    </div>
                     {/* PRODUCT FIVE */}
 
                     {/* PRODUCT SIX */}
-                    <Carousel.Item className="PopularItems__SingleItem">
+                    <div className="PopularItems__SingleItem">
                         <img className="PopularItems__Image"
                              src="./PopularItems/popular-item-6.png"
                              alt="Sixth slide"/>
@@ -208,11 +205,11 @@ const PopularItems = ({screenWidth}) => {
                                    onClick={handleAddToWishlist}/>
                             </div>
                         </div>
-                    </Carousel.Item>
+                    </div>
                     {/* PRODUCT SIX */}
 
                     {/* PRODUCT SEVEN */}
-                    <Carousel.Item className="PopularItems__SingleItem">
+                    <div className="PopularItems__SingleItem">
                         <img className="PopularItems__Image"
                              src="./PopularItems/popular-item-7.png"
                              alt="Seventh slide"/>
@@ -233,11 +230,11 @@ const PopularItems = ({screenWidth}) => {
                                    onClick={handleAddToWishlist}/>
                             </div>
                         </div>
-                    </Carousel.Item>
+                    </div>
                     {/* PRODUCT SEVEN */}
 
                     {/* PRODUCT EIGHT - STATIC WITH GRADIENT */}
-                    <Carousel.Item className="PopularItems__SingleItem__Static">
+                    <div className="PopularItems__SingleItem__Static">
 
                         <img className="PopularItems__SingleItem__Static__Image"
                              src="./PopularItems/popular-item-8.png"
@@ -252,10 +249,10 @@ const PopularItems = ({screenWidth}) => {
                             </div>
                         </div>
 
-                    </Carousel.Item>
+                    </div>
                     {/* PRODUCT EIGHT - STATIC WITH GRADIENT */}
 
-                </Carousel>
+                </OwlCarousel>
                 : null}
             {/* MOBILE */}
 
@@ -495,7 +492,7 @@ const PopularItems = ({screenWidth}) => {
                 <div className="PopularItems__DesktopTablet__LoadMoreButton"
                      onClick={handleLoadClick}>
                     <button className="">LOAD MORE</button>
-                    <i className="fas fa-redo-alt PopularItems__DesktopTablet__LoadMoreButton__Icon"></i>
+                    <i className="fas fa-redo-alt PopularItems__DesktopTablet__LoadMoreButton__Icon"/>
                 </div>
                 : null}
             {/* LOAD MORE BUTTON */}

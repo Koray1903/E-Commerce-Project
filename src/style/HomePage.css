@@ -5,12 +5,11 @@
   }
 }
 @media only screen and (min-width: 1024px) {
-  .HomePagePopularItemsBackground {
+  .HomePage .HomePagePopularItemsBackground {
     background: #262a32;
     color: white;
   }
-
-  .SliderSummerSalesBackground {
+  .HomePage .SliderSummerSalesBackground {
     align-items: center;
     display: flex;
     flex-direction: row;

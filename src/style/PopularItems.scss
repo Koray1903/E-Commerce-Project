@@ -230,6 +230,10 @@ $default-font: "Lato", sans-serif;
   .PopularItems__DesktopTablet__LoadMoreButton {
     display: none;
   }
+
+  .owl-dot:focus {
+    outline: 0;
+  }
 }
 
 

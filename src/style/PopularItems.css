@@ -214,6 +214,10 @@
   .PopularItems__DesktopTablet__LoadMoreButton {
     display: none;
   }
+
+  .owl-dot:focus {
+    outline: 0;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .PopularItems {

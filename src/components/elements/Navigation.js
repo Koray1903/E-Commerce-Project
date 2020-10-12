@@ -45,7 +45,6 @@ const Navigation = ({screenWidth}) => {
             </div>
             {/* OUTER NAVIGATION */}
 
-
             {/* INNER NAVIGATION */}
             {screenWidth < 768 ? // MOBILE VERSION
                 <>
@@ -58,9 +57,7 @@ const Navigation = ({screenWidth}) => {
                                     :
                                     <i className="fas fa-caret-up Navigation__Option__Up"/>
                                 }
-                                {/*<i className={`fas fa-caret-down Navigation__Option__Down ${!showProductCategories ? "Element__Display" : "Element__Hide"}`}/>*/}
-                                {/*<i className={`fas fa-caret-up Navigation__Option__Up ${showProductCategories ? "Element__Display" : "Element__Hide"}`}/>*/}
-                            </div>
+                           </div>
 
                             <div
                                 className={`Navigation__Option__Inner__Categories ${showProductCategories ? "Element__Display" : "Element__Hide"}`}>
@@ -81,8 +78,6 @@ const Navigation = ({screenWidth}) => {
                                     :
                                     <i className="fas fa-caret-up Navigation__Option__Up"/>
                                 }
-                                {/*<i className={`fas fa-caret-down Navigation__Option__Down ${!showSale ? "Element__Display" : "Element__Hide"}`}/>*/}
-                                {/*<i className={`fas fa-caret-up Navigation__Option__Up ${showSale ? "Element__Display" : "Element__Hide"}`}/>*/}
                             </div>
 
                             <div
@@ -104,6 +99,7 @@ const Navigation = ({screenWidth}) => {
                                 <p className="Navigation__Option__Inner__ProductCategories__Title">
                                     product categories
                                 </p>
+
                                 <div
                                     className={`Navigation__Option__Inner__ProductCategories__Categories ${showServices ? "Element__Display" : "Element__Hide"}`}>
                                     {productCategories.map(element =>
@@ -117,6 +113,7 @@ const Navigation = ({screenWidth}) => {
                                 <p className="Navigation__Option__Inner__Sale__Title">
                                     sale
                                 </p>
+
                                 <div
                                     className={`Navigation__Option__Inner__Sale__Categories ${showServices ? "Element__Display" : "Element__Hide"}`}>
                                     {sale.map(element =>
@@ -134,7 +131,6 @@ const Navigation = ({screenWidth}) => {
             }
             {/* INNER NAVIGATION */}
 
-
             {/* OUTER NAVIGATION */}
             <div className="Navigation__Option__Outer Navigation__Option__Outer__OnHover">
                 <p className="Navigation__Option__Outer__Text">company</p>
@@ -148,7 +144,6 @@ const Navigation = ({screenWidth}) => {
                 <p className="Navigation__Option__Outer__Text">contact us</p>
             </div>
             {/* OUTER NAVIGATION */}
-
 
             {screenWidth < 768 ? // IN MOBILE VERSION
                 <img className="Navigation__Image" src="./navigation/shopping_image.png" alt="shopping_girl"/>

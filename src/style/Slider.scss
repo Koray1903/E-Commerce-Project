@@ -1,5 +1,4 @@
 $default-font: "Lato", sans-serif;
-// PADDING - 24PX
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .Slider {
@@ -7,61 +6,67 @@ $default-font: "Lato", sans-serif;
     display: flex;
     flex-direction: column;
     padding: 100px 24px 24px 24px;
-  }
-
-  .Slider__Carousel {
-
-  }
-
-  .SliderItems__SingleItem {
-    height: 520px;
-  }
-
-  .SliderItems__Info {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 480px;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 24px;
-    width: 90%;
-  }
 
 
-  .SliderItems__Info__Title {
-    color: white;
-    font-family: $default-font;
-    font-size: 24px;
-    font-weight: 800;
-  }
-
-  .SliderItems__Info__Text {
-    color: white;
-    font-family: $default-font;
-    font-size: 15px;
-    font-weight: 400;
-  }
+    .Slider__Carousel {
 
 
-  .SliderItems__Info__Button {
-    background: transparent;
-    border: 2px solid white;
-    border-radius: 24px;
-    color: white;
-    font-family: $default-font;
-    font-size: 14px;
-    padding: 6px 36px 6px 36px;
-    text-transform: uppercase;
-  }
+      .SliderItems__SingleItem {
+        height: 520px;
 
-  .SliderItems__Info__Button:focus {
-    outline: 0;
-  }
 
-  .SliderItems__Info__Button:hover {
-    background: white;
-    color:gray;
+        .SliderItems__Info {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          height: 480px;
+          justify-content: space-between;
+          margin: 0 auto;
+          padding: 24px;
+          width: 90%;
+        }
+
+
+        .SliderItems__Info__Title {
+          color: white;
+          font-family: $default-font;
+          font-size: 24px;
+          font-weight: 800;
+        }
+
+        .SliderItems__Info__Text {
+          color: white;
+          font-family: $default-font;
+          font-size: 15px;
+          font-weight: 400;
+        }
+
+
+        .SliderItems__Info__Button {
+          background: transparent;
+          border: 2px solid white;
+          border-radius: 24px;
+          color: white;
+          font-family: $default-font;
+          font-size: 14px;
+          padding: 6px 36px 6px 36px;
+          text-transform: uppercase;
+        }
+
+        .SliderItems__Info__Button:focus {
+          outline: 0;
+        }
+
+        .SliderItems__Info__Button:hover {
+          background: white;
+          color: gray;
+        }
+      }
+
+      .owl-dot:focus {
+        outline: 0;
+      }
+    }
   }
 }
 
@@ -82,61 +87,67 @@ $default-font: "Lato", sans-serif;
     display: flex;
     flex-direction: column;
     width: 70%;
-  }
-
-  .Slider__Carousel {
-    height: 500px;
-    width: 100%;
-  }
-
-  .SliderItems__SingleItem {
-    height: 500px;
-    width: 100%;
-  }
-
-  .SliderItems__Info {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    height: 400px;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 24px;
-    width: 80%;
-  }
-
-  .SliderItems__Info__Title {
-    color: white;
-    font-family: $default-font;
-    font-size: 36px;
-    font-weight: 800;
-  }
-
-  .SliderItems__Info__Text {
-    color: white;
-    font-family: $default-font;
-    font-size: 15px;
-    font-weight: 400;
-  }
 
 
-  .SliderItems__Info__Button {
-    background: transparent;
-    border: 2px solid white;
-    border-radius: 24px;
-    color: white;
-    font-family: $default-font;
-    font-size: 14px;
-    padding: 6px 36px 6px 36px;
-    text-transform: uppercase;
-  }
+    .Slider__Carousel {
+      height: 550px;
+      width: 100%;
 
-  .SliderItems__Info__Button:focus {
-    outline: 0;
-  }
 
-  .SliderItems__Info__Button:hover {
-    background: white;
-    color:gray;
+      .SliderItems__SingleItem {
+        height: 500px;
+        width: 100%;
+
+        .SliderItems__Info {
+          align-items: flex-start;
+          display: flex;
+          flex-direction: column;
+          height: 400px;
+          justify-content: space-between;
+          margin: 0 auto;
+          padding: 24px;
+          width: 80%;
+        }
+
+        .SliderItems__Info__Title {
+          color: white;
+          font-family: $default-font;
+          font-size: 36px;
+          font-weight: 800;
+        }
+
+        .SliderItems__Info__Text {
+          color: white;
+          font-family: $default-font;
+          font-size: 15px;
+          font-weight: 400;
+        }
+
+
+        .SliderItems__Info__Button {
+          background: transparent;
+          border: 2px solid white;
+          border-radius: 24px;
+          color: white;
+          font-family: $default-font;
+          font-size: 14px;
+          padding: 6px 36px 6px 36px;
+          text-transform: uppercase;
+        }
+
+        .SliderItems__Info__Button:focus {
+          outline: 0;
+        }
+
+        .SliderItems__Info__Button:hover {
+          background: white;
+          color: gray;
+        }
+      }
+
+      .owl-dot:focus {
+        outline: 0;
+      }
+    }
   }
 }

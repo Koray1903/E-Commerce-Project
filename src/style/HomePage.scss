@@ -13,23 +13,20 @@ $default-font: "Lato", sans-serif;
 
 @media only screen and (min-width: 1024px) {
   .HomePage {
+    .HomePagePopularItemsBackground {
+      background: #262a32;
+      color: white;
+    }
 
+    .SliderSummerSalesBackground {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      margin-top: 90px;
+      padding: 24px 0;
+      width: 1300px;
+    }
   }
-
-  .HomePagePopularItemsBackground {
-    background: #262a32;
-    color: white;
-  }
-
-  .SliderSummerSalesBackground {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    margin-top: 90px;
-    padding: 24px 0;
-    width: 1300px;
-  }
-
 }
