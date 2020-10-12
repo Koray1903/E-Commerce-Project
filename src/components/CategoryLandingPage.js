@@ -11,9 +11,7 @@ import {useSelector} from "react-redux";
 const CategoryLandingPage = ({screenWidth}) => {
 
     // SCROLL TO TOP ON MOUNT
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    useEffect(() => window.scrollTo(0, 0), []);
     // SCROLL TO TOP ON MOUNT
 
     // EXTRA LOADED PRODUCTS

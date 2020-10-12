@@ -1,37 +1,34 @@
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-  .Header__Mobile {
+  .Header .Header__Mobile {
     align-items: center;
     background: white;
     border-bottom: 2px solid #e8e2d6;
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     padding: 12px;
     position: fixed;
-    top: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 1000;
   }
-
-  .Header__Mobile__Hamburger__Open {
+  .Header .Header__Mobile .Header__Mobile__Hamburger__Open {
     color: black;
     cursor: pointer;
     font-size: 32px;
     width: 32px;
   }
-
-  .Header__Mobile__Hamburger__Close {
+  .Header .Header__Mobile .Header__Mobile__Hamburger__Close {
+    color: black;
     cursor: pointer;
     font-size: 32px;
     width: 32px;
   }
-
-  .Header__Mobile__Logo__Icon {
+  .Header .Header__Mobile .Header__Mobile__Logo__Icon {
     height: 55px;
     justify-self: center;
     margin: 0 auto;
   }
-
-  .Header__LanguageCurrency {
+  .Header .Header__Mobile .Header__LanguageCurrency {
     display: none;
   }
 }
@@ -41,6 +38,7 @@
     background: white;
     border-bottom: 2px solid #e8e2d6;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding: 0 64px;
     position: fixed;
@@ -48,25 +46,23 @@
     width: 1300px;
     z-index: 1000;
   }
-
-  .Header__TabletDesktop {
+  .Header .Header__TabletDesktop {
     align-items: center;
     display: flex;
+    flex-direction: row;
     height: max-content;
     justify-content: center;
     justify-self: flex-start;
     padding: 12px 0;
     width: 175px;
   }
-  .Header__TabletDesktop a, .Header__TabletDesktop a:link, .Header__TabletDesktop a:visited, .Header__TabletDesktop a:hover a:active {
+  .Header .Header__TabletDesktop a, .Header .Header__TabletDesktop a:link, .Header .Header__TabletDesktop a:visited, .Header .Header__TabletDesktop a:hover a:active {
     text-decoration: none;
   }
-
-  .Header__TabletDesktop__Icon {
+  .Header .Header__TabletDesktop .Header__TabletDesktop__Icon {
     height: 64px;
   }
-
-  .Header__TabletDesktop__Text {
+  .Header .Header__TabletDesktop .Header__TabletDesktop__Text {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -75,8 +71,7 @@
     margin: 0 auto;
     width: max-content;
   }
-
-  .Header__TabletDesktop__Text__1 {
+  .Header .Header__TabletDesktop .Header__TabletDesktop__Text__1 {
     color: #011847;
     font-family: "Lato", sans-serif;
     font-size: 36px;
@@ -86,8 +81,7 @@
     margin: 0;
     text-transform: uppercase;
   }
-
-  .Header__TabletDesktop__Text__2 {
+  .Header .Header__TabletDesktop .Header__TabletDesktop__Text__2 {
     color: #84bc22;
     font-family: "Lato", sans-serif;
     font-size: 18px;
@@ -96,8 +90,7 @@
     margin: 0;
     text-transform: capitalize;
   }
-
-  .Header__LanguageCurrency {
+  .Header .Header__LanguageCurrency {
     align-items: center;
     align-self: flex-end;
     display: flex;
@@ -106,8 +99,7 @@
     justify-content: space-between;
     margin-bottom: 10px;
   }
-
-  .Header__LanguageCurrency__Inner__Filter {
+  .Header .Header__LanguageCurrency .Header__LanguageCurrency__Inner__Filter {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -127,12 +119,10 @@
     padding: 8px 8px;
     width: 90px;
   }
-
-  .Header__LanguageCurrency__Inner__Filter::-ms-expand {
+  .Header .Header__LanguageCurrency .Header__LanguageCurrency__Inner__Filter::-ms-expand {
     display: none;
   }
-
-  .Header__LanguageCurrency__Inner__Filter:focus {
+  .Header .Header__LanguageCurrency .Header__LanguageCurrency__Inner__Filter:focus {
     outline: none;
   }
 }

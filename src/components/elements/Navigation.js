@@ -53,8 +53,13 @@ const Navigation = ({screenWidth}) => {
                         <div onClick={handleProductCategoriesClick}>
                             <div className="Navigation__Option__Inner">
                                 <p className="Navigation__Option__Inner__Text">product categories</p>
-                                <i className={`fas fa-caret-down Navigation__Option__Down ${!showProductCategories ? "Element__Display" : "Element__Hide"}`}/>
-                                <i className={`fas fa-caret-up Navigation__Option__Up ${showProductCategories ? "Element__Display" : "Element__Hide"}`}/>
+                                {!showProductCategories ?
+                                    <i className="fas fa-caret-down Navigation__Option__Down"/>
+                                    :
+                                    <i className="fas fa-caret-up Navigation__Option__Up"/>
+                                }
+                                {/*<i className={`fas fa-caret-down Navigation__Option__Down ${!showProductCategories ? "Element__Display" : "Element__Hide"}`}/>*/}
+                                {/*<i className={`fas fa-caret-up Navigation__Option__Up ${showProductCategories ? "Element__Display" : "Element__Hide"}`}/>*/}
                             </div>
 
                             <div
@@ -71,8 +76,13 @@ const Navigation = ({screenWidth}) => {
                         <div onClick={handleSaleClick}>
                             <div className="Navigation__Option__Inner">
                                 <p className="Navigation__Option__Inner__Text">sale</p>
-                                <i className={`fas fa-caret-down Navigation__Option__Down ${!showSale ? "Element__Display" : "Element__Hide"}`}/>
-                                <i className={`fas fa-caret-up Navigation__Option__Up ${showSale ? "Element__Display" : "Element__Hide"}`}/>
+                                {!showSale ?
+                                    <i className="fas fa-caret-down Navigation__Option__Down"/>
+                                    :
+                                    <i className="fas fa-caret-up Navigation__Option__Up"/>
+                                }
+                                {/*<i className={`fas fa-caret-down Navigation__Option__Down ${!showSale ? "Element__Display" : "Element__Hide"}`}/>*/}
+                                {/*<i className={`fas fa-caret-up Navigation__Option__Up ${showSale ? "Element__Display" : "Element__Hide"}`}/>*/}
                             </div>
 
                             <div

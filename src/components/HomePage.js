@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import {useSelector, useDispatch} from "react-redux";
 import Header from "./elements/Header";
 import Slider from "./elements/Slider";
 import SummerSales from "./elements/SummerSales";
@@ -10,7 +11,6 @@ import Fixed from "./elements/Fixed";
 import CookieModal from "./elements/CookieModal";
 import FeaturedProducts from "./elements/FeaturedProducts";
 import "../style/HomePage.scss";
-import {useSelector, useDispatch} from "react-redux";
 import {fetchProducts} from "../redux/actions.js";
 
 const HomePage = ({screenWidth}) => {

@@ -24,7 +24,6 @@ const Header = ({screenWidth}) => {
                         <i className="fas fa-bars Header__Mobile__Hamburger__Open"
                            onClick={handleShowNavigation}/>
                         :
-
                         <i className="fas fa-times Header__Mobile__Hamburger__Close"
                            onClick={handleShowNavigation}/>
                     }
@@ -50,7 +49,6 @@ const Header = ({screenWidth}) => {
                 // TABLET & DESKTOP VERSION
             }
 
-
             {/* MOBILE VERSION NAVIGATION MENU */}
             {screenWidth < 768 && showNavigation ? <Navigation screenWidth={screenWidth}/> : null}
             {/* MOBILE VERSION NAVIGATION MENU */}
@@ -58,7 +56,6 @@ const Header = ({screenWidth}) => {
             {/* TABLET & DESKTOP VERSION NAVIGATION MENU */}
             {screenWidth > 767 ? <Navigation screenWidth={screenWidth}/> : null}
             {/* TABLET & DESKTOP VERSION NAVIGATION MENU */}
-
 
             {/* LANGUAGE & CURRENCY  */}
             <div className="Header__LanguageCurrency">
@@ -75,7 +72,6 @@ const Header = ({screenWidth}) => {
                 </select>
             </div>
             {/* LANGUAGE & CURRENCY  */}
-
 
             {/* TABLET & DESKTOP VERSION FIXED */}
             {screenWidth > 767 ? <Fixed/> : null}
